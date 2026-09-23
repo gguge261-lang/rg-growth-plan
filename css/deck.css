@@ -1,0 +1,39 @@
+/* ===========================================================
+   deck.css — 全站统一刻度层
+   第 02-04 页原本各自硬编码尺寸，这里把同一套 --deck-* 变量
+   推广到其余所有 section，让 14 页的编号、标题、边距完全对齐。
+   =========================================================== */
+
+/* 0｜页面高度：取屏幕高度与 16:10 中较小者。
+      手机按 1440 宽渲染时，每页仍是一屏桌面比例，不会被竖屏拉长 */
+:root{--page-h:min(100svh,62.5vw)}
+
+/* 1｜页面外框：与 p2/p3/p4 相同的左右边距与内容宽度 */
+.section:not(.hero){padding-left:var(--deck-pad-x);padding-right:var(--deck-pad-x)}
+.section:not(.hero)>.wrap{max-width:1600px}
+
+/* 2｜标题排版：统一字号、字距与行高 */
+.section:not(.hero) h2{font-size:var(--deck-title);line-height:1.08;letter-spacing:-.045em;max-width:none}
+.section:not(.hero) h2+p,.section:not(.hero) .section-head p{font-size:var(--deck-desc);line-height:1.5;margin-top:10px}
+
+/* 3｜通用页眉：改成 p2/p3/p4 那套「编号列 + 正文列」网格，
+      让 section-no 的 x 坐标和精装页逐像素对齐 */
+.section-head{display:grid;grid-template-columns:var(--deck-num-col) minmax(0,1fr);gap:20px;align-items:start;margin-bottom:clamp(18px,2vw,28px)}
+.section-head>.section-no{min-width:0;padding-top:12px;font:800 20px/1 "Inter Tight",sans-serif;letter-spacing:0;color:#633fe5}
+.section-head>.section-no:after{width:46px;height:3px;margin-top:13px;background:#7042e8}
+.dark .section-head>.section-no{color:#c3a9ff}
+.dark .section-head>.section-no:after{background:linear-gradient(90deg,#a97cff,#ef59f9)}
+.section-head .eyebrow{margin-bottom:8px}
+
+/* 4｜非 section-head 结构的页面（verify / handover / app / future），
+      把散落的 .section-no 对到同一条基线上 */
+.verify-copy,.handover-story,.future-copy,.app-head>div:first-child{position:relative;padding-left:calc(var(--deck-num-col) + 20px)}
+.verify-copy>.section-no,.handover-story>.section-no,.future-copy>.section-no,.app-head>div:first-child>.section-no{position:absolute;left:0;top:0;width:var(--deck-num-col);padding-top:12px;font:800 20px/1 "Inter Tight",sans-serif;letter-spacing:0}
+.verify-copy>.section-no:after,.handover-story>.section-no:after,.future-copy>.section-no:after,.app-head>div:first-child>.section-no:after{width:46px;height:3px;margin-top:13px}
+
+/* 5｜每页铺满一屏：内容不再浮在上半屏 */
+@media(min-width:861px){
+  .section:not(.hero):not(.ending){min-height:calc(var(--page-h) - var(--nav));align-items:stretch;padding-top:calc(var(--nav) + var(--deck-pad-y));padding-bottom:18px}
+  /* 只对没有自带栅格的 .wrap 生效，verify-layout / handover-layout 等保持原有布局 */
+  .section:not(.hero):not(.ending)>.wrap:not([class*="-layout"]):not([class*="-grid"]){display:flex;flex-direction:column;justify-content:flex-start}
+}

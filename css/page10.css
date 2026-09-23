@@ -1,0 +1,95 @@
+/* ===========================================================
+   page10.css — RG App：活动、社区与 UGC（按参考图重做）
+   舞台内按参考图（1672 宽）定位：左文案+数据 / 两台手机 / 右 四张功能卡 + 本周精选
+   底部：发现 → 参与 → 获取 → 提升 → 回访
+   尺寸与坐标写成 --s 的倍数；手写字用独立 rotate 属性，避免被 .reveal 覆盖
+   =========================================================== */
+
+.g10-page{--s:min(1vw,calc(var(--page-h)*.0178),calc((100vw - 2*var(--deck-pad-x))/96),16.6px);background:radial-gradient(38% 55% at 50% 45%,rgba(214,200,255,.5),transparent 70%),linear-gradient(135deg,#fdfcff 0%,#f7f4ff 50%,#f1ecff 100%)}
+
+.g10-stage{position:relative;display:flex;flex:1;min-height:0}
+/* 定位画布固定高度，在大屏上垂直居中，避免内容全挤在上半屏 */
+.g10-canvas{position:relative;flex:none;width:100%;height:calc(var(--s)*43);margin:auto 0}
+.g10-planet{position:absolute;left:calc(var(--s)*-4);bottom:calc(var(--s)*-1);width:calc(var(--s)*34);height:auto;opacity:.75;pointer-events:none;-webkit-mask-image:linear-gradient(#000 60%,transparent);mask-image:linear-gradient(#000 60%,transparent)}
+
+/* ---------- 左：文案 + 数据 ---------- */
+.g10-copy{position:absolute;left:0;top:0;z-index:2;width:calc(var(--s)*29)}
+.g10-meta{display:flex;align-items:flex-start;gap:calc(var(--s)*2)}
+.g10-meta .dk-head-no{padding-top:0}
+.g10-meta .eyebrow{margin:0}
+.g10-title,.g10-desc,.g10-stats{margin-left:calc(var(--s)*4.3)!important}
+.g10-title{margin-top:calc(var(--s)*.9)!important;font-size:calc(var(--s)*2.75)!important;line-height:1.26!important;letter-spacing:-.02em!important;font-weight:800;color:#15112a;white-space:nowrap}
+.g10-title em{font-style:normal;background:linear-gradient(90deg,#7a2cf0,#a13cf2);-webkit-background-clip:text;background-clip:text;color:transparent}
+.g10-desc{margin-top:calc(var(--s)*1.5)!important;max-width:none!important;font-size:calc(var(--s)*.93)!important;line-height:1.65!important;color:#4d4564!important;white-space:nowrap}
+.g10-stats{display:flex;margin-top:calc(var(--s)*2.1)!important;padding:0;list-style:none}
+.g10-stats li{display:flex;flex-direction:column;padding:0 calc(var(--s)*2)}
+.g10-stats li:first-child{padding-left:0}
+.g10-stats li+li{border-left:1px solid #ddd6ee}
+.g10-stats b{font:800 calc(var(--s)*1.85)/1.1 "Inter Tight","Inter",sans-serif;color:#6a2fe6;letter-spacing:-.02em}
+.g10-stats span{margin-top:calc(var(--s)*.45);font-size:calc(var(--s)*.93);color:#4d4564}
+
+.g10-hand{position:absolute;z-index:3;font-family:"Zhi Mang Xing","STKaiti","KaiTi",cursive;color:#6a2fe6;white-space:nowrap;line-height:1.45;pointer-events:none}
+.g10-hand.h1{left:calc(var(--s)*13.3);top:calc(var(--s)*31.6);font-size:calc(var(--s)*1.35);rotate:-12deg}
+.g10-hand.h1:after{content:"";display:block;width:112%;height:calc(var(--s)*1.4);margin:calc(var(--s)*-.3) 0 0 -6%;border-bottom:1.5px solid #9b6bff;border-radius:0 0 70% 30%}
+.g10-hand.h2{right:calc(var(--s)*4.4);top:calc(var(--s)*1.1);font-size:calc(var(--s)*1.35);rotate:-7deg}
+.g10-hand.h2:after{content:"";display:block;width:60%;height:calc(var(--s)*.9);margin:0 0 0 28%;border-top:1.5px solid #9b6bff;border-radius:50% 50% 0 0;rotate:-4deg}
+.g10-motto{position:absolute;left:calc(var(--s)*.5);top:calc(var(--s)*35.8);z-index:2;font:500 calc(var(--s)*.9)/1.55 "Inter",sans-serif;letter-spacing:.04em;color:#8a82a3}
+
+/* ---------- 中：两台手机 ---------- */
+.g10-phone{position:absolute;width:auto;filter:drop-shadow(0 calc(var(--s)*1.6) calc(var(--s)*2.4) rgba(40,20,100,.22))}
+.g10-phone.events{z-index:2;left:calc(var(--s)*29.1);top:calc(var(--s)*-1.7);height:calc(var(--s)*43.4)}
+.g10-phone.community{z-index:1;left:calc(var(--s)*49.4);top:calc(var(--s)*.3);height:calc(var(--s)*41)}
+
+/* ---------- 右：功能卡 + 本周精选 ---------- */
+.g10-card{position:absolute;z-index:2;width:calc(var(--s)*12.4);height:auto}
+.g10-card.c-events{right:calc(var(--s)*13.1);top:calc(var(--s)*5.4)}
+.g10-card.c-qa{right:0;top:calc(var(--s)*5.1)}
+.g10-card.c-content{right:calc(var(--s)*13.1);top:calc(var(--s)*15.9)}
+.g10-card.c-revisit{right:0;top:calc(var(--s)*15.5)}
+.g10-week{position:absolute;z-index:2;right:calc(var(--s)*-.6);top:calc(var(--s)*25.6);width:calc(var(--s)*26);height:auto}
+
+/* ---------- 底部流程 ---------- */
+.g10-bar{flex:none;margin:calc(var(--s)*.8) max(calc(var(--s)*20.5),300px) 0 0;padding:calc(var(--s)*.95) calc(var(--s)*1.6);border:1px solid rgba(73,41,150,.06);border-radius:calc(var(--s)*1.3);background:rgba(255,255,255,.92);box-shadow:0 calc(var(--s)*.7) calc(var(--s)*2) rgba(73,41,150,.08)}
+.g10-bar ol{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));margin:0;padding:0;list-style:none}
+.g10-bar li{position:relative;display:flex;align-items:center;gap:calc(var(--s)*.8);min-width:0;padding-right:calc(var(--s)*1.4)}
+.g10-bar li+li:before{content:"";position:absolute;left:calc(var(--s)*-1.2);top:50%;width:calc(var(--s)*.5);height:calc(var(--s)*.5);border-top:1.8px solid #6d6585;border-right:1.8px solid #6d6585;transform:translateY(-50%) rotate(45deg)}
+.g10-bar li>span{display:grid;place-items:center;width:calc(var(--s)*3);height:calc(var(--s)*3);flex:none;border-radius:50%;background:#efe9ff;color:#6a2fe6}
+.g10-bar li svg{width:50%;height:50%;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.g10-bar li svg.fill{fill:currentColor;stroke-width:1.4}
+.g10-bar li>div{min-width:0}
+.g10-bar li b{display:block;font-size:calc(var(--s)*.9);font-weight:800;color:#15112a;white-space:nowrap}
+.g10-bar li b i{margin-right:calc(var(--s)*.5);font:600 calc(var(--s)*.9)/1 "Inter",sans-serif;font-style:normal;color:#6a2fe6}
+.g10-bar li small{display:block;margin-top:calc(var(--s)*.3);font-size:calc(var(--s)*.72);color:#6d6585;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* ---------- 窄桌面 ---------- */
+@media(min-width:861px) and (max-width:1200px){
+  .g10-bar li>span{display:none}
+  .g10-hand.h1,.g10-motto{display:none}
+}
+
+/* ---------- 移动端：取消定位，顺序堆叠 ---------- */
+@media(max-width:860px){
+  .g10-page{--s:3.6vw}
+  .g10-stage{display:block}
+  .g10-canvas{display:flex;flex-direction:column;gap:18px;height:auto;margin:0}
+  .g10-planet,.g10-hand,.g10-motto{display:none}
+  .g10-copy,.g10-phone,.g10-card,.g10-week{position:static;width:auto}
+  .g10-title,.g10-desc,.g10-stats{margin-left:0!important}
+  .g10-title{white-space:normal;font-size:clamp(28px,7.6vw,40px)!important}
+  .g10-title br{display:none}
+  .g10-desc{white-space:normal;font-size:14px!important}
+  .g10-desc br{display:none}
+  .g10-stats b{font-size:26px}
+  .g10-stats span{font-size:13px;white-space:nowrap}
+  .g10-stats li{padding:0 18px}
+  .g10-phone{height:auto;width:min(280px,76vw);margin:0 auto}
+  .g10-card{width:88%;margin:0 auto}
+  .g10-week{width:100%}
+  .g10-bar{margin:18px 0 0;padding:16px}
+  .g10-bar ol{grid-template-columns:1fr;gap:14px}
+  .g10-bar li{padding-right:0}
+  .g10-bar li+li:before{display:none}
+  .g10-bar li b{font-size:15px}
+  .g10-bar li b i{font-size:15px}
+  .g10-bar li small{font-size:12px}
+}

@@ -1,0 +1,131 @@
+/* ===========================================================
+   page07.css — 客户经理个人电子名片
+   在旧版线上页（“真的很容易被封号”）的基础上，把三件事讲清楚：
+   人人一张专属名片 / 联系方式藏进链接 / 监管牌照在名片里可查。
+   布局：上 标题(跨左两栏) / 左 三条说明 + 二维码 / 中 封号警示 + 主页简介对照 / 右 手机 + 牌照卡
+   尺寸统一用 --s（≈ 参考截图里的 1% 宽度），按视口等比缩放。
+   =========================================================== */
+
+.g7-page{--s:min(1vw,calc(var(--page-h)*.0178),calc((100vw - 2*var(--deck-pad-x))/96),16.6px);background:url(../assets/bg-city.webp) center bottom/cover no-repeat,#f4f3ff}
+.g7-page:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.78) 0%,rgba(255,255,255,.4) 50%,rgba(255,255,255,0) 72%);pointer-events:none}
+.g7-page>.wrap{position:relative}
+
+.g7-grid{flex:1;display:grid;grid-template-columns:minmax(0,35fr) minmax(0,19fr) minmax(0,23fr) minmax(0,23fr);grid-template-rows:auto minmax(0,1fr);column-gap:calc(var(--s)*1.6);min-height:0}
+
+/* ---------- 标题 ---------- */
+.g7-top{grid-column:1/3;grid-row:1;position:relative;z-index:2;padding-top:calc(var(--s)*1.2)}
+.g7-kick{font:800 calc(var(--s)*.8)/1 "Inter",sans-serif;letter-spacing:.32em;text-transform:uppercase;color:#4b3bc9}
+.g7-title{margin:calc(var(--s)*1.4) 0 0!important;font-size:calc(var(--s)*3.15)!important;line-height:1.15!important;letter-spacing:-.02em!important;font-weight:800;color:#15112a;white-space:nowrap}
+.g7-title em{font-style:normal;background:linear-gradient(90deg,#7a2cf0,#a13cf2);-webkit-background-clip:text;background-clip:text;color:transparent}
+.g7-sub{margin:calc(var(--s)*1) 0 0!important;font-size:calc(var(--s)*1.2)!important;line-height:1.5!important;font-weight:600;color:#4d4564!important}
+.g7-sub b{color:#6a2fe6}
+
+/* ---------- 左栏：三条说明 + 二维码 ---------- */
+.g7-copy{grid-column:1;grid-row:2;position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;gap:calc(var(--s)*1.2);min-width:0;min-height:0}
+.g7-vals{display:grid;gap:calc(var(--s)*.7);margin:0;padding:0;list-style:none}
+.g7-vals li{display:flex;align-items:flex-start;gap:calc(var(--s)*1);padding:calc(var(--s)*.95) calc(var(--s)*1.2);border:1px solid rgba(73,41,150,.07);border-radius:calc(var(--s)*1);background:rgba(255,255,255,.88);box-shadow:0 calc(var(--s)*.4) calc(var(--s)*1.4) rgba(73,41,150,.07)}
+.g7-vals li>span{display:grid;place-items:center;width:calc(var(--s)*2.6);height:calc(var(--s)*2.6);flex:none;border-radius:calc(var(--s)*.75);background:linear-gradient(140deg,#8a4dff,#6a1fe0);color:#fff}
+.g7-vals svg{width:55%;height:55%;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.g7-vals b{display:block;font-size:calc(var(--s)*1.05);font-weight:800;color:#15112a}
+.g7-vals p{margin:calc(var(--s)*.3) 0 0!important;font-size:calc(var(--s)*.8)!important;line-height:1.6!important;color:#6d6585!important}
+
+.g7-cta{position:relative;display:flex;align-items:center;gap:calc(var(--s)*1.3);padding:calc(var(--s)*1.1) calc(var(--s)*1.8) calc(var(--s)*1.1) calc(var(--s)*1.1);border-radius:calc(var(--s)*1.2);background:linear-gradient(120deg,#7b12e8 0%,#9d2cf0 45%,#c150f4 78%,#a837ee 100%);box-shadow:0 calc(var(--s)*.8) calc(var(--s)*2.2) rgba(123,18,232,.28);color:#fff;text-decoration:none;overflow:hidden;transition:transform .25s}
+.g7-cta:hover{transform:translateY(-3px)}
+.g7-cta:before{content:"";position:absolute;right:-8%;top:-40%;width:55%;height:180%;background:radial-gradient(closest-side,rgba(255,255,255,.22),transparent);pointer-events:none}
+.g7-qr{width:calc(var(--s)*4.6);height:calc(var(--s)*4.6);flex:none;padding:calc(var(--s)*.4);border-radius:calc(var(--s)*.6);background:#fff}
+.g7-qr img{display:block;width:100%;height:100%}
+.g7-cta-copy{flex:1;min-width:0}
+.g7-cta-copy b{display:block;font-size:calc(var(--s)*1.3);line-height:1.3;font-weight:800}
+.g7-cta-copy small{display:block;margin-top:calc(var(--s)*.5);font-size:calc(var(--s)*.78);line-height:1.65;color:rgba(255,255,255,.85)}
+.g7-cta-copy code{font:600 calc(var(--s)*.76)/1 "Inter",monospace;padding:2px 6px;border-radius:5px;background:rgba(255,255,255,.18);color:#fff}
+.g7-cta-go{position:relative;width:calc(var(--s)*1.5);height:2px;flex:none;background:#fff}
+.g7-cta-go:after{content:"";position:absolute;right:0;top:50%;width:calc(var(--s)*.55);height:calc(var(--s)*.55);border-top:2px solid #fff;border-right:2px solid #fff;transform:translate(0,-50%) rotate(45deg)}
+
+/* ---------- 中栏：封号警示 + 主页简介对照 ---------- */
+.g7-ban{grid-column:2;grid-row:2;position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;gap:calc(var(--s)*1);min-width:0;min-height:0}
+.g7-ban-art{position:relative;flex:1;min-height:0;max-height:calc(var(--s)*20)}
+.g7-ban-art>img{position:absolute;left:50%;top:50%;width:112%;height:auto;max-height:118%;object-fit:contain;transform:translate(-50%,-46%)}
+.g7-warn{position:absolute;z-index:2;display:flex;align-items:flex-start;gap:calc(var(--s)*.7);padding:calc(var(--s)*.75) calc(var(--s)*1.05);border-radius:calc(var(--s)*.8);background:rgba(255,255,255,.96);box-shadow:0 calc(var(--s)*.5) calc(var(--s)*1.6) rgba(60,30,120,.12);white-space:nowrap;text-align:left}
+.g7-warn i{display:grid;place-items:center;width:calc(var(--s)*1.15);height:calc(var(--s)*1.15);flex:none;margin-top:calc(var(--s)*.08);border-radius:50%;background:#e5243f;color:#fff;font:800 calc(var(--s)*.75)/1 "Inter",sans-serif;font-style:normal}
+.g7-warn b{display:block;font-size:calc(var(--s)*.9);font-weight:800;color:#15112a}
+.g7-warn span{display:block;margin-top:calc(var(--s)*.2);font-size:calc(var(--s)*.82);color:#5d5670}
+.g7-warn.w1{left:-4%;top:0}
+.g7-warn.w2{right:4%;bottom:2%}
+
+.g7-bio{padding:calc(var(--s)*1) calc(var(--s)*1.1);border:1px solid rgba(73,41,150,.08);border-radius:calc(var(--s)*1);background:rgba(255,255,255,.94);box-shadow:0 calc(var(--s)*.5) calc(var(--s)*1.6) rgba(73,41,150,.08)}
+.g7-bio-label{margin-bottom:calc(var(--s)*.6);font-size:calc(var(--s)*.78);font-weight:800;letter-spacing:.08em;color:#8a82a3}
+.g7-bio-row{display:flex;align-items:flex-start;gap:calc(var(--s)*.6);padding:calc(var(--s)*.6) calc(var(--s)*.7);border-radius:calc(var(--s)*.6)}
+.g7-bio-row+.g7-bio-row{margin-top:calc(var(--s)*.45)}
+.g7-bio-row.bad{background:#fff1f3}
+.g7-bio-row.good{background:#ecfaf1}
+.g7-bio-row>i{display:grid;place-items:center;width:calc(var(--s)*1.1);height:calc(var(--s)*1.1);flex:none;border-radius:50%;color:#fff;font:800 calc(var(--s)*.65)/1 "Inter",sans-serif;font-style:normal}
+.g7-bio-row.bad>i{background:#e5243f}
+.g7-bio-row.good>i{background:#1fa25a}
+.g7-bio-row>div{min-width:0}
+.g7-bio-row code{display:block;font:600 calc(var(--s)*.78)/1.4 "Inter","PingFang SC",sans-serif;color:#231b3d;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.g7-bio-row.bad code{text-decoration:line-through;text-decoration-color:rgba(229,36,63,.55)}
+.g7-bio-row small{display:block;margin-top:calc(var(--s)*.15);font-size:calc(var(--s)*.72);line-height:1.4}
+.g7-bio-row.bad small{color:#b8324d}
+.g7-bio-row.good small{color:#157a40}
+
+/* ---------- 右：手机 ---------- */
+/* 原图四周留白很多：容器按手机本体比例，图片放大居中，白底用 multiply 融进背景 */
+.g7-phone{grid-column:3;grid-row:1/3;position:relative;z-index:1;justify-self:center;height:100%;aspect-ratio:.505;min-height:0;overflow-x:visible;overflow-y:clip}
+.g7-phone>img{position:absolute;left:50%;top:50%;height:141%;width:auto;max-width:none;transform:translate(-50%,-50%);mix-blend-mode:multiply;pointer-events:none}
+
+/* ---------- 最右：手写批注 + 牌照卡 ---------- */
+.g7-lic{grid-column:4;grid-row:1/3;position:relative;z-index:2;display:flex;flex-direction:column;justify-content:space-between;min-width:0;padding:calc(var(--s)*6) 0 calc(var(--s)*6.5)}
+.g7-hand{align-self:flex-start;font-family:"Zhi Mang Xing","STKaiti","KaiTi",cursive;font-size:calc(var(--s)*1.3);line-height:1.6;color:#6a2fe6;white-space:nowrap;transform:rotate(-10deg)}
+.g7-hand:after{content:"";display:block;width:80%;height:calc(var(--s)*.9);margin:calc(var(--s)*.1) 0 0 12%;border-bottom:2px solid #c78bf5;border-radius:0 0 50% 50%}
+
+.g7-lic-card{position:relative;margin-left:calc(var(--s)*1.4);padding:calc(var(--s)*1.1);border:1px solid rgba(73,41,150,.08);border-radius:calc(var(--s)*1.1);background:rgba(255,255,255,.96);box-shadow:0 calc(var(--s)*.8) calc(var(--s)*2.4) rgba(55,25,130,.12)}
+/* 连到手机里“公司背景与合规”那一块 */
+.g7-lic-card:before{content:"";position:absolute;right:100%;top:calc(var(--s)*7.3);width:calc(var(--s)*5);border-top:2px dashed #a882f5}
+.g7-lic-card:after{content:"";position:absolute;right:calc(100% + var(--s)*5 - 5px);top:calc(var(--s)*7.3 - 4px);width:10px;height:10px;border-radius:50%;background:#7c4aec;box-shadow:0 0 0 4px rgba(124,74,236,.18)}
+.g7-lic-head b{display:block;font-size:calc(var(--s)*1.05);font-weight:800;color:#15112a}
+.g7-lic-head span{display:block;margin-top:calc(var(--s)*.2);font-size:calc(var(--s)*.7);color:#8a82a3}
+.g7-lic-card a{display:flex;align-items:center;gap:calc(var(--s)*.7);margin-top:calc(var(--s)*.7);padding:calc(var(--s)*.6) calc(var(--s)*.7);border-radius:calc(var(--s)*.7);background:#f7f6fb;text-decoration:none;transition:background .2s}
+.g7-lic-card a:hover{background:#efeaff}
+.g7-lic-card a>img{width:calc(var(--s)*3.8);height:calc(var(--s)*1.8);flex:none;object-fit:contain;object-position:left center}
+.g7-lic-card a>img.doc{object-position:center;width:calc(var(--s)*3.8)}
+.g7-lic-card a>div{flex:1;min-width:0}
+.g7-lic-card a b{display:block;font-size:calc(var(--s)*.76);font-weight:800;color:#231b3d;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.g7-lic-card a small{display:block;margin-top:1px;font:600 calc(var(--s)*.72)/1.3 "Inter","PingFang SC",sans-serif;color:#6d6585;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.g7-lic-card a i{flex:none;font-size:calc(var(--s)*.68);font-weight:800;font-style:normal;color:#6a2fe6}
+.g7-lic-card a i:after{content:" →"}
+
+/* ---------- 窄桌面 ---------- */
+@media(min-width:861px) and (max-width:1200px){
+  .g7-hand{display:none}
+  .g7-lic{justify-content:center}
+}
+
+/* ---------- 移动端 ---------- */
+@media(max-width:860px){
+  .g7-page{--s:3.6vw;background-size:auto 60%}
+  .g7-page:before{background:rgba(255,255,255,.62)}
+  .g7-grid{grid-template-columns:1fr;grid-template-rows:none;row-gap:22px}
+  .g7-top,.g7-copy,.g7-ban,.g7-phone,.g7-lic{grid-column:1;grid-row:auto}
+  .g7-title{white-space:normal;font-size:clamp(28px,7.6vw,40px)!important}
+  .g7-sub{font-size:15px!important}
+  .g7-vals b{font-size:15px}
+  .g7-vals p{font-size:12.5px!important}
+  .g7-cta-copy b{font-size:17px}
+  .g7-cta-copy small,.g7-cta-copy code{font-size:11px}
+  .g7-ban-art{flex:none;height:62vw;max-height:none}
+  .g7-warn b{font-size:13px}
+  .g7-warn span{font-size:12px}
+  .g7-warn.w1{left:0}
+  .g7-warn.w2{right:0}
+  .g7-bio-label{font-size:12px}
+  .g7-bio-row code{font-size:12.5px;white-space:normal}
+  .g7-bio-row small{font-size:11.5px}
+  .g7-phone{height:auto;width:min(300px,78vw);aspect-ratio:.505}
+  .g7-lic{padding:0}
+  .g7-hand{display:none}
+  .g7-lic-card:before,.g7-lic-card:after{display:none}
+  .g7-lic-card{margin-left:0}
+  .g7-lic-head b{font-size:16px}
+  .g7-lic-head span,.g7-lic-card a small,.g7-lic-card a i{font-size:11.5px}
+  .g7-lic-card a b{font-size:13px}
+}

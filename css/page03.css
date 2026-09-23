@@ -1,0 +1,330 @@
+/* ===========================================================
+   page03.css — 关键词搜索库（按 页面3参考 重做）
+   结构：页眉(搜索框插画) / 四张 KPI / 左词库表 + 右 01-05 / 底部新人上手路径
+   插画、奖牌、效率条、箭头全部手写；只有平台 logo 用真实品牌标识
+   =========================================================== */
+
+.g3-page{background:radial-gradient(56% 52% at 76% 4%,rgba(224,216,255,.75),transparent 66%),linear-gradient(135deg,#fff 0%,#fbfaff 44%,#efecff 100%)}
+
+/* ---------- 页眉 ---------- */
+.g3-head{display:grid;grid-template-columns:var(--deck-num-col) minmax(0,1fr) minmax(330px,27%);gap:20px;align-items:start}
+.g3-head .dk-title em{font-size:calc(var(--deck-title) * .74)}
+.g3-head .dk-desc{max-width:66em!important}
+.g3-head-side{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:10px;min-width:0}
+
+/* 搜索框 + 平台标签 + 上升箭头 */
+.g3-art{position:relative;height:126px;min-width:0}
+.g3-art-box{position:absolute;right:0;top:6px;display:flex;align-items:center;gap:10px;width:172px;padding:11px 14px;border:1px solid rgba(255,255,255,.9);border-radius:14px;background:linear-gradient(160deg,#fff,#f4f1ff);box-shadow:0 12px 28px rgba(86,45,190,.16)}
+.g3-art-ic{display:grid;place-items:center;width:26px;height:26px;flex:none;border-radius:8px;background:#efebff;color:#5622dc}
+.g3-art-ic svg{width:16px;height:16px}
+.g3-art-box s{flex:1;height:7px;border-radius:99px;background:#ddd6ff;text-decoration:none}
+.g3-chip{position:absolute;padding:4px 9px;border-radius:8px;font-size:10.5px;font-weight:800;color:#fff;box-shadow:0 6px 14px rgba(60,25,140,.18)}
+.g3-chip.a{right:128px;top:58px;background:linear-gradient(140deg,#ff4d63,#e8102f)}
+.g3-chip.b{right:70px;top:76px;background:linear-gradient(140deg,#2b2b33,#000)}
+.g3-chip.c{right:6px;top:62px;background:linear-gradient(140deg,#ffa84d,#f47c16)}
+.g3-chip.d{right:34px;top:100px;background:linear-gradient(140deg,#4fc0f0,#1f97d6)}
+.g3-art-rise{position:absolute;left:0;top:14px;width:108px;height:76px}
+
+.g3-note{display:flex;flex-direction:column;align-items:flex-end;gap:7px;text-align:right}
+.g3-note .dk-hand{font-size:17px;white-space:nowrap;transform:rotate(-5deg)}
+.g3-note .dk-en b{font-size:12.5px}
+.g3-note .dk-en span{font-size:11.5px}
+
+/* ---------- 四张 KPI ---------- */
+.g3-kpi{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.g3-kpi li{display:flex;align-items:center;gap:13px;padding:12px 16px;border:1px solid rgba(73,41,150,.08);border-radius:16px;background:rgba(255,255,255,.96);box-shadow:0 10px 26px rgba(73,41,150,.06)}
+.g3-kpi li>div{min-width:0}
+.g3-k-ic{display:grid;place-items:center;width:44px;height:44px;flex:none;border-radius:13px;background:#f0ecff;color:#5622dc}
+.g3-k-ic svg{width:23px;height:23px}
+.g3-kpi li.gold .g3-k-ic{background:linear-gradient(150deg,#ffe9c9,#ffd79b);color:#c1741a}
+.g3-kpi small{display:block;font-size:12px;color:#918aa8;white-space:nowrap}
+.g3-k-row{display:flex;align-items:baseline;gap:10px;margin-top:3px;min-width:0}
+.g3-k-row b{font:800 26px/1 "Inter Tight","Microsoft YaHei",sans-serif;letter-spacing:-.03em;color:#17112c;white-space:nowrap}
+.g3-kpi li.gold .g3-k-row b{font-size:19px}
+.g3-k-row b s{font-size:17px;text-decoration:none}
+.g3-k-row em{display:flex;align-items:baseline;gap:5px;font-style:normal;font-size:12px;font-weight:800;white-space:nowrap}
+.g3-k-row em.up{color:#17794a}
+.g3-k-row em.plain{color:#6d6585;font-weight:600}
+.g3-k-row em u{text-decoration:none;font-weight:800;color:#c1741a}
+.g3-k-row em i{font-style:normal;font-size:11px;font-weight:600;color:#a09ab3}
+
+/* ---------- 主体：左词库表 + 右 01-05 ---------- */
+.g3-board{display:grid;grid-template-columns:minmax(0,1.58fr) minmax(0,1fr);gap:14px;min-height:0}
+.g3-board>*{min-width:0;min-height:0}
+
+.g3-lib{display:flex;flex-direction:column;padding:13px 16px 12px;border:1px solid rgba(73,41,150,.09);border-radius:19px;background:linear-gradient(165deg,#fff,#faf8ff);box-shadow:0 14px 36px rgba(73,41,150,.08)}
+.g3-lib-head{display:flex;align-items:baseline;gap:11px;padding-bottom:9px}
+.g3-lib-head b{flex:none;font:800 18px/1.2 "Inter Tight","Microsoft YaHei",sans-serif;color:#1a1236}
+.g3-lib-head small{flex:1;min-width:0;font-size:11.5px;color:#918aa8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.g3-resort{display:flex;align-items:center;gap:6px;flex:none;padding:5px 11px;border-radius:999px;background:#f0ebff;color:#5b28d6;font-size:11.5px;font-weight:800}
+.g3-resort-ic{display:grid;place-items:center;width:15px;height:15px}
+.g3-resort-ic svg{width:15px;height:15px}
+
+/* 九列：# / 关键词 / 平台 / 效率 / 线索 / 成交 / 加多少人 / 成交率 / 结论 */
+.g3-cols,.g3-list li{display:grid;grid-template-columns:30px minmax(0,1fr) 104px 96px 48px 42px 86px 58px 64px;align-items:center;gap:10px}
+.g3-cols{padding:0 12px 8px;border-bottom:1px solid #eeeaf8;font-size:11px;color:#9a92b0;font-weight:700}
+.g3-cols>span{text-align:right}
+.g3-cols>span:nth-child(1),.g3-cols>span:nth-child(2),.g3-cols>span:nth-child(3){text-align:left}
+.g3-cols>span:last-child{text-align:center}
+.g3-col-key{color:#6a3ce0}
+
+.g3-list{flex:1;display:grid;grid-auto-rows:1fr;gap:5px;margin:7px 0 0;padding:0;list-style:none;min-height:0}
+.g3-list li{padding:7px 12px;border:1px solid transparent;border-radius:12px}
+.g3-list li.good{border-color:#d9c9ff;background:linear-gradient(110deg,#fbf9ff,#f5f0ff)}
+.g3-list li.mid{background:#fbfaff}
+
+/* 排名奖牌 */
+.g3-no{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#f1eef8;color:#9a92b0;font:800 12px/1 "Inter Tight",sans-serif}
+.g3-no.gold{background:linear-gradient(145deg,#ffd97a,#f0a81c);color:#5e3a00;box-shadow:0 4px 10px rgba(226,150,20,.3)}
+.g3-no.silver{background:linear-gradient(145deg,#e4e8f2,#bcc4d6);color:#48505f}
+.g3-no.bronze{background:linear-gradient(145deg,#f0c39a,#d08b52);color:#5c3517}
+
+.g3-kw{font-size:15px;font-weight:800;color:#1a1236;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.g3-plat{display:flex;align-items:center;gap:7px;min-width:0}
+.g3-plat img{width:22px;height:22px;flex:none;border-radius:6px;object-fit:cover}
+.g3-plat small{font-size:12px;color:#5d5575;white-space:nowrap}
+
+.g3-eff{display:block;height:8px;border-radius:99px;background:#eeeaf8;overflow:hidden}
+.g3-eff i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#a97cff,#5a21d8)}
+.g3-list li.warn .g3-eff i,.g3-list li.weak .g3-eff i{background:linear-gradient(90deg,#d6cdf0,#ab9ddb)}
+
+.g3-leads,.g3-deals{text-align:right;font:700 14px/1 "Inter Tight",sans-serif;color:#6d6585}
+.g3-deals{color:#1a1236;font-weight:800}
+
+/* 重点列 */
+.g3-need{display:flex;align-items:baseline;justify-content:flex-end;gap:2px}
+.g3-need b{font:800 27px/1 "Inter Tight",sans-serif;letter-spacing:-.03em;color:#4f18cf}
+.g3-need small{font-size:11px;font-weight:700;color:#9a92b0}
+.g3-list li.warn .g3-need b,.g3-list li.weak .g3-need b{color:#9c8fc4}
+
+.g3-rate{text-align:right;font:800 14px/1 "Inter Tight",sans-serif;color:#1a1236}
+.g3-rate small{font-size:10.5px;font-weight:700;color:#9a92b0}
+
+.g3-flag{justify-self:center;padding:4px 9px;border-radius:999px;font-size:11px;font-weight:800;white-space:nowrap}
+.g3-list li.good .g3-flag{background:#e4fbee;color:#17794a}
+.g3-list li.mid .g3-flag{background:#eaf1ff;color:#2f5aa8}
+.g3-list li.warn .g3-flag{background:#fff3e2;color:#9a5a12}
+.g3-list li.weak .g3-flag{background:#fdeceb;color:#a8302e}
+
+/* 老销售 → 新人 */
+.g3-lib-foot{display:flex;align-items:center;gap:10px;margin-top:10px;padding-top:10px;border-top:1px dashed #e4dff3}
+.g3-pill{display:flex;align-items:center;gap:6px;flex:none;padding:5px 12px;border-radius:999px;font-size:12px;font-weight:800}
+.g3-pill i{display:grid;place-items:center;width:16px;height:16px}
+.g3-pill i svg{width:16px;height:16px}
+.g3-pill.old{background:#f1eff6;color:#7b7392}
+.g3-pill.new{background:linear-gradient(120deg,#7b27ef,#5d31db);color:#fff;box-shadow:0 6px 14px rgba(101,39,224,.22)}
+.g3-lib-foot small{flex:none;font-size:11.5px;color:#9a92b0}
+.g3-foot-say{flex:1!important;min-width:0;color:#3d3358!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.g3-arrow{position:relative;width:34px;height:2px;flex:none;background:linear-gradient(90deg,#d8cdf5,#7c4aec)}
+.g3-arrow:after{content:"";position:absolute;right:0;top:50%;width:7px;height:7px;margin-top:-4px;border-right:2px solid #7c4aec;border-bottom:2px solid #7c4aec;transform:rotate(-45deg)}
+
+/* ---------- 右侧 01-05 ---------- */
+.g3-how{display:flex;flex-direction:column}
+.g3-how-title{margin-bottom:8px;font:800 18px/1.2 "Inter Tight","Microsoft YaHei",sans-serif;color:#1a1236}
+.g3-how-grid{flex:1;display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:9px;min-height:0}
+.g3-how-grid article{position:relative;overflow:hidden;display:flex;flex-direction:column;padding:11px 13px 11px;border:1px solid rgba(73,41,150,.08);border-radius:15px;background:rgba(255,255,255,.96);box-shadow:0 8px 22px rgba(73,41,150,.06)}
+.g3-how-grid article.wide{grid-column:1/-1}
+.g3-h-ic{display:grid;place-items:center;width:34px;height:34px;flex:none;border-radius:10px;background:#efebff;color:#5622dc}
+.g3-h-ic svg{width:19px;height:19px}
+/* 右上角的淡色装饰图标 */
+.g3-h-deco{position:absolute;right:10px;top:10px;width:26px;height:26px;color:#cfc4ef;opacity:.55;pointer-events:none}
+.g3-h-deco svg{width:26px;height:26px}
+.g3-how-grid i{display:block;margin-top:8px;font-style:normal;font:800 11px/1 "Inter Tight",sans-serif;letter-spacing:.14em;color:#8b5cf0}
+.g3-how-grid h3{margin:3px 0 0;font-size:15px;font-weight:800;color:#1a1236;letter-spacing:-.02em}
+.g3-how-grid p{margin:4px 0 0!important;font-size:11.5px!important;line-height:1.5!important;color:#7b7392!important}
+.g3-how-grid article.wide h3{margin-top:2px}
+
+/* ---------- 底部：新人上手路径 ---------- */
+.g3-path{display:grid;grid-template-columns:150px minmax(0,1fr) auto;align-items:center;gap:16px;padding:11px 18px;border:1px solid rgba(73,41,150,.08);border-radius:16px;background:rgba(255,255,255,.96);box-shadow:0 10px 26px rgba(73,41,150,.06)}
+.g3-path-label{padding-right:16px;border-right:1px solid #eae5f6}
+.g3-path-label b{display:block;font-size:13.5px;font-weight:800;color:#1a1236}
+.g3-path-label small{display:block;margin-top:3px;font-size:11px;color:#8a82a3}
+.g3-path ol{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none}
+.g3-path li{position:relative;display:flex;align-items:center;gap:9px;min-width:0;padding-right:12px}
+.g3-path li+li{padding-left:12px}
+.g3-path li+li:before{content:"";position:absolute;left:-1px;top:50%;width:7px;height:7px;margin-top:-4px;border-right:2px solid #c9bdf0;border-bottom:2px solid #c9bdf0;transform:rotate(-45deg)}
+.g3-path li>span{display:grid;place-items:center;width:28px;height:28px;flex:none;border-radius:50%;background:linear-gradient(140deg,#8353ff,#5317d2);color:#fff;font:800 12.5px/1 "Inter Tight",sans-serif}
+.g3-path li>div{min-width:0}
+.g3-path li b{display:block;font-size:13px;font-weight:800;color:#1a1236;white-space:nowrap}
+.g3-path li small{display:block;margin-top:2px;font-size:10.5px;color:#8a82a3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.g3-path-hand{flex:none;padding-left:16px;border-left:1px solid #eae5f6;font-family:"Zhi Mang Xing","STKaiti","KaiTi",cursive;font-size:17px;line-height:1.45;color:#6538d9;white-space:nowrap;transform:rotate(-3deg)}
+
+/* ---------- 桌面：一屏内垂直分配 ---------- */
+@media(min-width:861px){
+  .g3-head{flex:none;margin-bottom:12px}
+  .g3-kpi{flex:none;margin-bottom:12px}
+  .g3-board{flex:1;min-height:0}
+  .g3-path{flex:none;margin-top:11px}
+}
+
+/* ---------- 矮屏 ---------- */
+@media(min-width:861px) and (max-height:900px){
+  .g3-art{height:108px}
+  .g3-art-box{width:152px;padding:9px 12px}
+  .g3-art-rise{width:92px;height:66px}
+  .g3-chip{font-size:9.5px;padding:3px 8px}
+  .g3-chip.a{right:112px;top:50px}.g3-chip.b{right:62px;top:66px}
+  .g3-chip.c{right:6px;top:54px}.g3-chip.d{right:30px;top:86px}
+  .g3-head{margin-bottom:9px}
+  .g3-kpi{gap:9px;margin-bottom:9px}
+  .g3-kpi li{padding:9px 13px;gap:10px}
+  .g3-k-ic{width:38px;height:38px;border-radius:11px}
+  .g3-k-ic svg{width:20px;height:20px}
+  .g3-k-row b{font-size:22px}
+  .g3-kpi li.gold .g3-k-row b{font-size:16px}
+  .g3-lib{padding:10px 13px 10px}
+  .g3-lib-head b{font-size:16px}
+  .g3-list{gap:4px;margin-top:6px}
+  .g3-list li{padding:5px 11px}
+  .g3-no{width:23px;height:23px;font-size:11px}
+  .g3-kw{font-size:13.5px}
+  .g3-need b{font-size:23px}
+  .g3-lib-foot{margin-top:8px;padding-top:8px}
+  .g3-how-title{font-size:16px;margin-bottom:6px}
+  .g3-how-grid{gap:7px}
+  .g3-how-grid article{padding:7px 10px}
+  .g3-h-ic{width:30px;height:30px}
+  .g3-h-ic svg{width:17px;height:17px}
+  .g3-h-deco{width:22px;height:22px;right:8px;top:8px}
+  .g3-h-deco svg{width:22px;height:22px}
+  .g3-how-grid i{margin-top:6px}
+  .g3-how-grid h3{font-size:13.5px}
+  .g3-how-grid p{font-size:11px!important;line-height:1.38!important}
+  .g3-path{margin-top:9px;padding:9px 14px}
+  .g3-path li b{font-size:12px}
+  .g3-path li small{font-size:10px}
+  .g3-path-hand{font-size:15px}
+}
+
+/* ---------- 超矮屏（1366×768 这类笔记本）：头部和 KPI 再让出空间给右侧卡片 ---------- */
+@media(min-width:861px) and (max-height:820px){
+  .g3-head{margin-bottom:8px}
+  .g3-head .dk-desc{margin-top:5px!important;font-size:13px!important;line-height:1.45!important}
+  .g3-art{height:96px}
+  .g3-kpi{margin-bottom:8px}
+  .g3-kpi li{padding:7px 11px;gap:9px}
+  .g3-k-ic{width:34px;height:34px;border-radius:10px}
+  .g3-k-ic svg{width:18px;height:18px}
+  .g3-kpi small{font-size:11px}
+  .g3-k-row{margin-top:2px}
+  .g3-k-row b{font-size:19px}
+  .g3-kpi li.gold .g3-k-row b{font-size:14.5px}
+  .g3-k-row em{font-size:11px}
+  .g3-how-title{font-size:15px;margin-bottom:5px}
+  .g3-how-grid{gap:6px}
+  .g3-how-grid article{padding:7px 10px}
+  .g3-h-ic{width:26px;height:26px;border-radius:8px}
+  .g3-h-ic svg{width:15px;height:15px}
+  .g3-h-deco{display:none}
+  .g3-how-grid i{margin-top:4px;font-size:10px}
+  .g3-how-grid h3{margin-top:2px;font-size:12.5px}
+  .g3-how-grid p{margin-top:2px!important;font-size:10.5px!important;line-height:1.4!important}
+  .g3-path{margin-top:8px;padding:7px 13px}
+  .g3-path li>span{width:25px;height:25px;font-size:11.5px}
+  .g3-path li b{font-size:11.5px}
+  .g3-path li small{font-size:9.5px}
+  .g3-path-label b{font-size:12.5px}
+  .g3-path-label small{font-size:10px}
+}
+
+/* ---------- 720p 笔记本 ---------- */
+@media(min-width:861px) and (max-height:760px){
+  .g3-head{margin-bottom:7px}
+  .g3-art{height:86px}
+  .g3-art-box{width:124px;padding:7px 10px}
+  .g3-art-rise{width:76px;height:56px}
+  .g3-kpi{margin-bottom:7px;gap:8px}
+  .g3-kpi li{padding:6px 10px;gap:8px}
+  .g3-k-ic{width:31px;height:31px;border-radius:9px}
+  .g3-k-ic svg{width:17px;height:17px}
+  .g3-kpi small{font-size:10.5px}
+  .g3-k-row b{font-size:18px}
+  .g3-kpi li.gold .g3-k-row b{font-size:13.5px}
+  .g3-k-row em{font-size:10.5px}
+  .g3-lib{padding:9px 11px 9px}
+  .g3-cols{padding-bottom:6px;font-size:10px}
+  .g3-list{gap:3px;margin-top:5px}
+  .g3-list li{padding:4px 10px}
+  .g3-no{width:21px;height:21px;font-size:10.5px}
+  .g3-kw{font-size:12.5px}
+  .g3-plat img{width:19px;height:19px}
+  .g3-need b{font-size:21px}
+  .g3-lib-foot{margin-top:6px;padding-top:6px}
+  .g3-pill{padding:4px 10px;font-size:11px}
+  .g3-how-title{font-size:14px;margin-bottom:4px}
+  .g3-how-grid{gap:5px}
+  .g3-how-grid article{padding:5px 8px}
+  .g3-h-ic{width:22px;height:22px;border-radius:7px}
+  .g3-h-ic svg{width:13px;height:13px}
+  .g3-how-grid i{margin-top:2px;font-size:9px}
+  .g3-how-grid h3{font-size:11.5px;line-height:1.25}
+  .g3-how-grid p{margin-top:1px!important;font-size:9.5px!important;line-height:1.3!important}
+  .g3-path{margin-top:7px;padding:6px 12px}
+  .g3-path li>span{width:23px;height:23px;font-size:11px}
+  .g3-path li b{font-size:11px}
+  .g3-path li small{font-size:9px}
+  .g3-path-label b{font-size:12px}
+  .g3-path-label small{font-size:9.5px}
+}
+
+/* ---------- 窄屏 ---------- */
+@media(min-width:861px) and (max-width:1440px){
+  .g3-head{grid-template-columns:var(--deck-num-col) minmax(0,1fr) 312px}
+  .g3-head-side{grid-template-columns:minmax(0,1fr) 122px;gap:9px}
+  .g3-art{height:110px}
+  .g3-art-box{width:132px;padding:8px 11px}
+  .g3-art-rise{width:84px;height:62px}
+  .g3-note .dk-hand{font-size:13.5px;line-height:1.45;white-space:normal}
+  .g3-note .dk-en b{font-size:10.5px}
+  .g3-note .dk-en span{font-size:10px}
+  .g3-lib-head small{display:none}
+  .g3-cols,.g3-list li{grid-template-columns:26px minmax(0,1fr) 80px 62px 42px 38px 70px 50px 56px;gap:8px}
+  .g3-kw{font-size:13px}
+  .g3-plat small{display:none}
+  .g3-need b{font-size:23px}
+  .g3-k-row em i{display:none}
+  .g3-foot-say{font-size:11px!important}
+  .g3-path-hand{font-size:13.5px;line-height:1.4;white-space:normal;max-width:106px;padding-left:12px}
+  .g3-path{grid-template-columns:132px minmax(0,1fr) auto;gap:12px}
+  .g3-path li small{font-size:9.5px}
+}
+
+/* ---------- 真正窄的桌面（<1150px）才收起手写 ---------- */
+@media(min-width:861px) and (max-width:1150px){
+  .g3-note,.g3-path-hand{display:none}
+  .g3-head-side{grid-template-columns:minmax(0,1fr)}
+  .g3-path{grid-template-columns:130px minmax(0,1fr)}
+}
+
+/* ---------- 移动端 ---------- */
+@media(max-width:860px){
+  .g3-head{grid-template-columns:40px minmax(0,1fr)}
+  .g3-head-side{grid-column:1/-1;grid-template-columns:1fr;margin-top:12px}
+  .g3-art{display:none}
+  .g3-note{align-items:flex-start;text-align:left}
+  .g3-kpi{grid-template-columns:1fr 1fr;gap:9px;margin:14px 0 12px}
+  .g3-board{grid-template-columns:1fr;gap:12px}
+  .g3-cols{display:none}
+  .g3-list li{grid-template-columns:26px minmax(0,1fr) auto;grid-template-areas:"no kw need" "no plat need" "eff eff eff" "stats stats flag";gap:7px 9px}
+  .g3-no{grid-area:no}
+  .g3-kw{grid-area:kw}
+  .g3-plat{grid-area:plat}
+  .g3-eff{grid-area:eff}
+  .g3-need{grid-area:need}
+  .g3-need:after{content:"人成交 1 单";margin-left:4px;font-size:10.5px;font-weight:700;color:#9a92b0}
+  .g3-leads{grid-area:stats;text-align:left}
+  .g3-leads:after{content:" 条线索";font-size:11px;color:#9a92b0}
+  .g3-deals,.g3-rate{display:none}
+  .g3-flag{grid-area:flag;justify-self:end}
+  .g3-lib-foot{flex-wrap:wrap}
+  .g3-arrow{display:none}
+  .g3-foot-say{flex-basis:100%!important;white-space:normal}
+  .g3-how-grid{grid-template-columns:1fr}
+  .g3-path{grid-template-columns:1fr;gap:10px;margin-top:12px}
+  .g3-path-label{padding:0 0 10px;border-right:0;border-bottom:1px solid #eae5f6}
+  .g3-path ol{grid-template-columns:1fr}
+  .g3-path li+li{padding-left:0}
+  .g3-path li+li:before{display:none}
+  .g3-path li b,.g3-path li small{white-space:normal}
+  .g3-path-hand{display:none}
+}

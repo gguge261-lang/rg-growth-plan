@@ -1,0 +1,110 @@
+/* ===========================================================
+   page11.css — RG 销售工作台（最后一页）
+   左：标题 + 获客学习工具 / 中：工作台首页手机 + 今日待办 / 右：信任与转化 + 代理管理
+   底部：一天的工作流 + 署名（替代原来的结尾页）
+   缩放单位与底部条规则同第 08–10 页
+   =========================================================== */
+
+.g11-page{--s:min(1vw,calc(var(--page-h)*.0178),calc((100vw - 2*var(--deck-pad-x))/96),16.6px);background:radial-gradient(34% 60% at 50% 45%,rgba(214,200,255,.55),transparent 70%),linear-gradient(135deg,#fdfcff 0%,#f7f4ff 50%,#f0ebff 100%)}
+
+.g11-grid{flex:1;display:grid;grid-template-columns:minmax(0,34fr) minmax(0,29fr) minmax(0,37fr);grid-template-rows:minmax(0,1fr);column-gap:calc(var(--s)*1.8);min-height:0}
+
+/* ---------- 工具分组卡（左右共用） ---------- */
+.g11-group{padding:calc(var(--s)*1.1) calc(var(--s)*1.2) calc(var(--s)*1.2);border:1px solid rgba(73,41,150,.07);border-radius:calc(var(--s)*1.2);background:rgba(255,255,255,.92);box-shadow:0 calc(var(--s)*.7) calc(var(--s)*2) rgba(73,41,150,.08)}
+.g11-group header{display:flex;align-items:center;gap:calc(var(--s)*.8);margin-bottom:calc(var(--s)*.85)}
+.g11-group header>span{display:grid;place-items:center;width:calc(var(--s)*2.5);height:calc(var(--s)*2.5);flex:none;border-radius:calc(var(--s)*.7);color:#fff}
+.g11-group header>span svg{width:54%;height:54%;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.g11-group.learn header>span{background:linear-gradient(140deg,#9b6bff,#6a1fe0)}
+.g11-group.trust header>span{background:linear-gradient(140deg,#3ccf7c,#17944a)}
+.g11-group.agent header>span{background:linear-gradient(140deg,#5b8cff,#2f5fd8)}
+.g11-group header>div{flex:1;min-width:0}
+.g11-group header b{display:block;font-size:calc(var(--s)*1.05);font-weight:800;color:#15112a}
+.g11-group header small{display:block;margin-top:calc(var(--s)*.2);font-size:calc(var(--s)*.74);color:#8a82a3}
+.g11-sync{display:inline-flex;align-items:center;gap:calc(var(--s)*.3);flex:none;padding:calc(var(--s)*.3) calc(var(--s)*.65);border-radius:99px;background:#eaf0ff;color:#2f5fd8;font-size:calc(var(--s)*.68);font-weight:700;font-style:normal;white-space:nowrap}
+.g11-sync svg{width:calc(var(--s)*.85);height:calc(var(--s)*.85);fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.g11-group ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--s)*.55);margin:0;padding:0;list-style:none}
+.g11-group li{min-width:0;padding:calc(var(--s)*.65) calc(var(--s)*.8);border-radius:calc(var(--s)*.7);background:#f7f5fc}
+.g11-group.trust li{background:#f2fbf5}
+.g11-group.agent li{background:#f3f6ff}
+.g11-group li b{display:flex;align-items:center;font-size:calc(var(--s)*.86);font-weight:800;color:#15112a;white-space:nowrap}
+.g11-group li b .dk-ref{margin-left:calc(var(--s)*.35);font-style:normal}
+.g11-group li span{display:block;margin-top:calc(var(--s)*.25);font-size:calc(var(--s)*.72);line-height:1.45;color:#6d6585}
+
+/* ---------- 左 ---------- */
+.g11-left{display:flex;flex-direction:column;min-width:0;min-height:0;padding-top:calc(var(--s)*1.2)}
+.g11-meta{display:flex;align-items:flex-start;gap:calc(var(--s)*2)}
+.g11-meta .dk-head-no{padding-top:0}
+.g11-meta .eyebrow{margin:0}
+.g11-title{margin:calc(var(--s)*1.6) 0 0!important;font-size:calc(var(--s)*2.45)!important;line-height:1.3!important;letter-spacing:-.02em!important;font-weight:800;color:#15112a;white-space:nowrap}
+.g11-title em{font-style:normal;background:linear-gradient(90deg,#6a1fe0,#a13cf2);-webkit-background-clip:text;background-clip:text;color:transparent}
+.g11-desc{margin:calc(var(--s)*1.3) 0 0!important;max-width:none!important;font-size:calc(var(--s)*.92)!important;line-height:1.75!important;color:#4d4564!important}
+.g11-desc b{color:#15112a}
+.g11-left .g11-group{margin-top:auto}
+
+/* ---------- 中：手机 + 今日待办 ---------- */
+.g11-center{position:relative;display:flex;justify-content:center;min-width:0;min-height:0}
+.g11-phone{position:relative;height:100%;padding:calc(var(--s)*.55);border-radius:calc(var(--s)*3);background:linear-gradient(160deg,#4a3a86,#1b1238 40%,#2c1f5c);box-shadow:0 calc(var(--s)*2) calc(var(--s)*3.5) rgba(40,20,100,.28),inset 0 0 0 1px rgba(255,255,255,.18)}
+.g11-phone img{display:block;height:100%;width:auto;border-radius:calc(var(--s)*2.5)}
+.g11-todo{position:absolute;z-index:2;right:calc(var(--s)*-1.4);bottom:calc(var(--s)*3.2);width:calc(var(--s)*18);height:auto;padding:calc(var(--s)*.45);border-radius:calc(var(--s)*1.1);background:#fff;box-shadow:0 calc(var(--s)*1.2) calc(var(--s)*3) rgba(55,25,130,.25);rotate:-2deg}
+.g11-hand{position:absolute;z-index:3;left:calc(var(--s)*-4.4);bottom:calc(var(--s)*12.5);font-family:"Zhi Mang Xing","STKaiti","KaiTi",cursive;font-size:calc(var(--s)*1.3);line-height:1.45;color:#6a2fe6;white-space:nowrap;rotate:-10deg;pointer-events:none}
+.g11-hand:after{content:"";display:block;width:90%;height:calc(var(--s)*.9);margin-left:5%;border-bottom:1.5px solid #9b6bff;border-radius:0 0 60% 40%}
+
+/* ---------- 右 ---------- */
+.g11-right{display:flex;flex-direction:column;justify-content:center;gap:calc(var(--s)*1.2);min-width:0;min-height:0}
+.g11-group.agent ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+
+/* ---------- 底部：一天的工作流 + 署名 ---------- */
+.g11-bar{flex:none;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:calc(var(--s)*1.4);margin:calc(var(--s)*1.1) max(calc(var(--s)*20.5),300px) 0 0;padding:calc(var(--s)*.9) calc(var(--s)*1.4);border:1px solid rgba(73,41,150,.06);border-radius:calc(var(--s)*1.3);background:rgba(255,255,255,.94);box-shadow:0 calc(var(--s)*.7) calc(var(--s)*2) rgba(73,41,150,.08)}
+.g11-bar-label{padding-right:calc(var(--s)*1.4);border-right:1px solid #eae5f6}
+.g11-bar-label b{display:block;font-size:calc(var(--s)*1.05);font-weight:800;color:#15112a;white-space:nowrap}
+.g11-bar-label small{display:block;margin-top:calc(var(--s)*.25);font-size:calc(var(--s)*.72);color:#8a82a3;white-space:nowrap}
+.g11-bar ol{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));margin:0;padding:0;list-style:none}
+.g11-bar li{position:relative;display:flex;align-items:center;gap:calc(var(--s)*.6);min-width:0;padding-right:calc(var(--s)*1.1)}
+.g11-bar li+li:before{content:"";position:absolute;left:calc(var(--s)*-.95);top:50%;width:calc(var(--s)*.45);height:calc(var(--s)*.45);border-top:1.6px solid #b9a6f3;border-right:1.6px solid #b9a6f3;transform:translateY(-50%) rotate(45deg)}
+.g11-bar li>i{display:grid;place-items:center;width:calc(var(--s)*2);height:calc(var(--s)*2);flex:none;border-radius:50%;background:linear-gradient(140deg,#8a4dff,#6a1fe0);color:#fff;font:700 calc(var(--s)*.72)/1 "Inter",sans-serif;font-style:normal}
+.g11-bar li>div{min-width:0}
+.g11-bar li b{display:block;font-size:calc(var(--s)*.9);font-weight:800;color:#15112a;white-space:nowrap}
+.g11-bar li small{display:block;margin-top:calc(var(--s)*.2);font-size:calc(var(--s)*.7);color:#6d6585;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.g11-sign{display:flex;align-items:center;gap:calc(var(--s)*.7);padding-left:calc(var(--s)*1.4);border-left:1px solid #eae5f6}
+.g11-mono{display:grid;place-items:center;width:calc(var(--s)*2.6);height:calc(var(--s)*2.6);flex:none;border-radius:50%;background:linear-gradient(140deg,#9b6bff,#6a1fe0);color:#fff;font-size:calc(var(--s)*1.05);font-weight:800}
+.g11-sign b{display:block;font-size:calc(var(--s)*.95);font-weight:800;color:#15112a;white-space:nowrap}
+.g11-sign small{display:block;margin-top:calc(var(--s)*.2);font-size:calc(var(--s)*.68);color:#8a82a3;white-space:nowrap}
+
+/* ---------- 窄桌面 ---------- */
+@media(min-width:861px) and (max-width:1200px){
+  .g11-bar-label small,.g11-sign>div,.g11-hand,.g11-meta .eyebrow span{display:none}
+  .g11-sign{padding-left:calc(var(--s)*1)}
+}
+
+/* ---------- 移动端 ---------- */
+@media(max-width:860px){
+  .g11-page{--s:3.6vw}
+  .g11-grid{grid-template-columns:1fr;grid-template-rows:none;row-gap:22px}
+  .g11-left{padding-top:0}
+  .g11-title{white-space:normal;font-size:clamp(26px,7vw,36px)!important}
+  .g11-desc{font-size:14px!important}
+  .g11-left .g11-group{margin-top:20px}
+  .g11-group header b{font-size:16px}
+  .g11-group header small,.g11-sync{font-size:11.5px}
+  .g11-group li b{font-size:13.5px}
+  .g11-group li span{font-size:12px}
+  .g11-center{flex-direction:column;align-items:center;gap:16px}
+  .g11-phone{height:auto;width:min(300px,80vw)}
+  .g11-phone img{width:100%;height:auto}
+  .g11-todo{position:static;width:100%;rotate:0deg}
+  .g11-hand{display:none}
+  .g11-bar{grid-template-columns:1fr;margin:20px 0 0;padding:16px}
+  .g11-bar-label{padding:0 0 12px;border-right:0;border-bottom:1px solid #eae5f6}
+  .g11-bar-label b{font-size:16px}
+  .g11-bar-label small{font-size:12px}
+  .g11-bar ol{grid-template-columns:1fr;gap:12px}
+  .g11-bar li{padding-right:0}
+  .g11-bar li+li:before{display:none}
+  .g11-bar li>i{width:28px;height:28px;font-size:11px}
+  .g11-bar li b{font-size:14.5px}
+  .g11-bar li small{font-size:12px;white-space:normal}
+  .g11-sign{padding:12px 0 0;border-left:0;border-top:1px solid #eae5f6}
+  .g11-mono{width:40px;height:40px;font-size:16px}
+  .g11-sign b{font-size:15px}
+  .g11-sign small{font-size:12px}
+}

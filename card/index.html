@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>梅龙龙 · 客户经理（B 端） · RockGlobal</title>
+<meta name="description" content="梅龙龙 Longlong Mei — Rockfort Markets Limited（RockGlobal）客户经理（B 端）。机构、资管与代理客户对接。新西兰注册主体，监管与注册信息公开可查。">
+<meta name="theme-color" content="#2A0A5E">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="梅龙龙 · 客户经理（B 端） · RockGlobal">
+<meta property="og:description" content="机构 · 资管 · 代理客户对接　·　新西兰注册主体，注册信息公开可查">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%235B21E8'/><text x='16' y='23' font-size='19' font-weight='700' text-anchor='middle' fill='white' font-family='sans-serif'>R</text></svg>">
+
+<style>
+:root{
+  --pv:#4B25D6; --pv2:#7C3AF5; --pvd:#2A0A5E;
+  --ink:#141033; --ink2:#474168; --ink3:#7A7599; --ink4:#A7A2C2;
+  --line:#E9E6F7; --line2:#F3F1FB; --soft:#FAF9FE;
+  --ff:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  --fd:"Inter Tight","Inter",var(--ff);
+  --hand:"Segoe Script","Bradley Hand","KaiTi","STKaiti",cursive;
+  --navh:66px; --barh:54px;
+  --gut:clamp(14px,10.5vw,190px);
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{min-height:100svh;font-family:var(--ff);color:var(--ink);line-height:1.6;
+  -webkit-font-smoothing:antialiased;background:#E8E9FA}
+.bg{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:#E8E9FA url(../assets/card-bg.webp) center top/cover no-repeat}
+.bg::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(240,241,253,.30),rgba(233,235,252,.10) 40%,rgba(226,228,251,.42))}
+
+/* ══ 顶部导航 ══ */
+.nav{position:relative;z-index:3;height:var(--navh);display:flex;align-items:center;gap:clamp(14px,2vw,34px);
+  padding:0 clamp(16px,3vw,46px);background:rgba(255,255,255,.96);
+  border-bottom:1px solid rgba(75,37,214,.07);box-shadow:0 1px 14px rgba(30,20,90,.05)}
+.nav .brand{display:flex;align-items:center;gap:12px;flex:none;text-decoration:none}
+.nav .brand img{height:26px;width:auto;display:block}
+.nav .brand em{font-style:normal;font-family:var(--fd);font-size:12.5px;font-weight:600;color:var(--ink3);
+  letter-spacing:.02em;white-space:nowrap}
+.nav .lks{display:flex;gap:clamp(12px,1.8vw,30px);margin-left:auto}
+.nav .lks a{text-decoration:none;font-size:14px;font-weight:600;color:#4A4568;white-space:nowrap;
+  padding:6px 0;position:relative}
+.nav .lks a:hover{color:var(--pv)}
+.nav .lks a.on{color:var(--pv);font-weight:700}
+.nav .lks a.on::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;border-radius:2px;background:var(--pv)}
+.nav .lang{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:600;color:#4A4568;white-space:nowrap}
+.nav .lang svg{width:16px;height:16px;fill:none;stroke:#6E6A8C;stroke-width:1.7}
+.nav .cta{display:inline-flex;align-items:center;gap:8px;flex:none;height:40px;padding:0 20px;border-radius:999px;
+  background:linear-gradient(120deg,#5B21E8,#8B3BF5);color:#fff;font-size:14px;font-weight:700;
+  text-decoration:none;box-shadow:0 8px 20px rgba(91,33,232,.28);transition:transform .18s}
+.nav .cta:hover{transform:translateY(-1px)}
+
+/* ══ 主区 ══ */
+.stage{position:relative;z-index:2;padding:clamp(14px,2.4vh,26px) var(--gut) clamp(14px,2.4vh,26px);
+  min-height:calc(100svh - var(--navh) - var(--barh));
+  display:grid;grid-template-columns:minmax(0,388px) minmax(0,1fr);gap:clamp(12px,1.3vw,20px);align-items:start}
+
+/* ── 名片 ── */
+.me{background:#fff;border-radius:20px;overflow:hidden;
+  box-shadow:0 22px 50px rgba(28,18,90,.20),0 2px 10px rgba(28,18,90,.07)}
+.hd{position:relative;padding:17px 20px 54px;
+  background:linear-gradient(150deg,#3B12A0 0%,#5B21E8 55%,#8438F2 100%)}
+.hd::after{content:"";position:absolute;right:-20%;top:-60%;width:80%;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,.16),transparent 66%)}
+.hd .hl{position:relative;z-index:1}
+.hd .hl img{height:23px;width:auto;display:block}
+.hd .hl span{display:block;margin-top:6px;font-size:11.5px;color:rgba(255,255,255,.72);letter-spacing:.02em}
+.hd .hw{position:absolute;z-index:1;right:16px;top:16px;text-align:center;transform:rotate(-7deg);
+  font-family:var(--hand);font-size:13px;font-weight:700;color:rgba(255,255,255,.9);line-height:1.55}
+
+.idb{position:relative;margin-top:-42px;padding:0 20px;text-align:center}
+.av{width:96px;height:96px;margin:0 auto;display:block;object-fit:contain;
+  filter:drop-shadow(0 8px 18px rgba(28,18,90,.22))}
+.nm{margin-top:10px;font-family:var(--fd);font-size:24px;font-weight:800;letter-spacing:-.02em;line-height:1.2}
+.nm span{display:block;margin-top:2px;font-size:10.5px;font-weight:700;letter-spacing:.26em;color:var(--ink4)}
+.pos{margin-top:9px;font-size:15px;font-weight:800;color:var(--pv)}
+.tag{display:inline-block;margin-top:8px;font-size:12px;font-weight:700;color:var(--pv);
+  background:#EFEBFE;border:1px solid #DCD3FB;border-radius:999px;padding:5px 15px}
+.quo{margin-top:11px;font-size:12.5px;color:var(--ink2);line-height:1.8;position:relative;padding:0 6px}
+.quo::before{content:"❝";position:absolute;left:-4px;top:-6px;font-size:15px;color:#C9BEF7}
+
+.rows{margin-top:14px;padding:0 14px;display:flex;flex-direction:column}
+.row{display:flex;align-items:center;gap:11px;width:100%;text-align:left;background:none;border:0;
+  font:inherit;color:inherit;cursor:pointer;padding:9px 6px;border-radius:11px;text-decoration:none;transition:background .18s}
+.row + .row{border-top:1px solid var(--line2)}
+@media (hover:hover){ .row:hover{background:var(--soft)} }
+.ic{flex:none;width:33px;height:33px;border-radius:10px;display:grid;place-items:center;
+  background:linear-gradient(150deg,#5B21E8,#9B4DF7);box-shadow:0 4px 12px rgba(91,33,232,.24)}
+.ic svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ic.wx{background:linear-gradient(150deg,#09BB55,#22D97A);box-shadow:0 4px 12px rgba(9,187,85,.24)}
+.tx{min-width:0;flex:1}
+.tx .l{display:block;font-size:10px;font-weight:600;color:var(--ink4);letter-spacing:.03em}
+.tx .v{display:block;margin-top:1px;font-size:13.5px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row .go{flex:none;font-size:11.5px;font-weight:700;color:var(--pv)}
+
+.qr{display:flex;align-items:center;gap:12px;margin:11px 20px 0;
+  background:var(--soft);border:1px solid var(--line);border-radius:13px;padding:11px}
+.qr img{flex:none;width:64px;height:64px;display:block;background:#fff;border-radius:8px;padding:4px}
+.qr .qt{font-size:12.5px;font-weight:800}
+.qr .qs{margin-top:4px;font-size:10.5px;color:var(--ink3);line-height:1.6}
+
+.cta2{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:13px 20px 0}
+.btn{display:flex;align-items:center;justify-content:center;gap:6px;height:44px;border-radius:999px;
+  font-size:13.5px;font-weight:800;cursor:pointer;border:1.6px solid transparent;font-family:inherit;transition:transform .18s}
+.btn.p{color:#fff;background:linear-gradient(120deg,#5B21E8,#9B3BF5);box-shadow:0 9px 20px rgba(91,33,232,.28)}
+.btn.s{color:var(--pv);background:#fff;border-color:#CCC0F6}
+.btn:active{transform:scale(.97)}
+.btn svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
+.mft{margin-top:13px;padding:11px 20px 15px;border-top:1px solid var(--line2);text-align:center;
+  font-size:11.5px;font-weight:700;letter-spacing:.06em;color:var(--ink3)}
+.hits{margin-top:5px;font-size:11px;font-weight:600;color:var(--ink4);letter-spacing:0}
+.hits b{font-family:var(--fd);font-size:13px;font-weight:800;color:var(--pv);margin:0 2px}
+.hits[hidden]{display:none}
+
+/* ── 右侧面板 ── */
+.body{display:flex;flex-direction:column;gap:clamp(12px,1.3vw,20px);min-width:0}
+.pnl{background:rgba(255,255,255,.94);border:1px solid rgba(255,255,255,.9);border-radius:20px;
+  padding:clamp(16px,1.7vw,26px);box-shadow:0 16px 40px rgba(28,18,90,.11)}
+.pill{display:inline-flex;align-items:center;gap:8px;background:#F1EDFE;border:1px solid #E0D8FB;
+  border-radius:999px;padding:6px 14px;font-size:12.5px;font-weight:700;color:var(--pv)}
+.pill svg{width:14px;height:14px;fill:none;stroke:var(--pv);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.hrow{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-top:11px}
+.hrow h2{font-size:clamp(20px,1.7vw,27px);font-weight:800;letter-spacing:-.025em;line-height:1.2}
+.hrow em{font-style:normal;font-size:11px;font-weight:700;letter-spacing:.15em;color:var(--ink4)}
+.hrow a{margin-left:auto;font-size:12.5px;font-weight:700;color:var(--pv);text-decoration:none;white-space:nowrap}
+.hrow a:hover{text-decoration:underline}
+.lead{margin-top:9px;font-size:13px;color:var(--ink2);line-height:1.75}
+.lead b{color:var(--ink);font-weight:700}
+
+.lic{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(9px,1vw,15px);margin-top:clamp(11px,1.2vw,17px)}
+.lc{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);
+  border-radius:15px;padding:clamp(13px,1.3vw,18px);text-decoration:none;color:inherit;transition:.2s}
+@media (hover:hover){ .lc:hover{border-color:#C7BAF6;box-shadow:0 10px 24px rgba(75,37,214,.13);transform:translateY(-2px)} }
+.lc .flag{position:absolute;right:12px;top:12px;font-size:10.5px;font-weight:700;color:var(--pv);
+  background:#F1EDFE;border:1px solid #E0D8FB;border-radius:999px;padding:3px 9px;white-space:nowrap}
+.lc .lgo{height:clamp(38px,3.6vw,50px);display:flex;align-items:center;gap:9px;margin-bottom:11px}
+.lc .lgo img{height:100%;width:auto;max-width:100%;object-fit:contain;display:block}
+.lc .lgo.sq img{height:84%}
+.lc .lgo b{font-family:var(--fd);font-size:clamp(9.5px,.85vw,11.5px);font-weight:900;line-height:1.15;
+  letter-spacing:-.02em;color:#0B1649}
+.lc h3{font-size:clamp(13px,1.05vw,15px);font-weight:800;letter-spacing:-.015em;line-height:1.4}
+.lc h3 span{display:block;font-size:.86em;font-weight:700;color:var(--ink2)}
+.lc p{margin-top:9px;font-size:12px;color:var(--ink2);line-height:1.75}
+.lc .fo{margin-top:auto;padding-top:12px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.lc .fo dt{font-size:11.5px;color:var(--ink3);font-weight:600;white-space:nowrap}
+.lc .fo dd{margin:0;font-size:13px;font-weight:800;letter-spacing:-.01em}
+.lc .fo .q{margin-left:auto;font-size:12px;font-weight:800;color:var(--pv);white-space:nowrap}
+
+.bdg{display:flex;flex-wrap:wrap;gap:9px;margin-top:clamp(11px,1.2vw,16px)}
+.bd{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line);
+  border-radius:11px;padding:8px 13px;font-size:12px;font-weight:700;color:#4E4874;white-space:nowrap}
+.bd svg{flex:none;width:14px;height:14px;fill:none;stroke:var(--pv);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+.why{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(9px,1vw,15px);margin-top:clamp(11px,1.2vw,17px)}
+.wc{background:var(--soft);border:1px solid var(--line);border-radius:15px;padding:clamp(13px,1.3vw,18px);transition:.2s}
+@media (hover:hover){ .wc:hover{background:#fff;border-color:#D4C9F8;transform:translateY(-2px);box-shadow:0 10px 22px rgba(28,18,90,.09)} }
+.wc .wi{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;margin-bottom:10px;
+  background:linear-gradient(150deg,#EFE9FE,#F7EAFE);border:1px solid #E1D7FB}
+.wc .wi svg{width:16px;height:16px;fill:none;stroke:var(--pv);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.wc b{display:block;font-size:13.5px;font-weight:800;letter-spacing:-.01em}
+.wc span{display:block;margin-top:6px;font-size:12px;color:var(--ink2);line-height:1.7}
+
+/* ══ 底栏 ══ */
+.bar{position:relative;z-index:3;min-height:var(--barh);display:flex;align-items:center;gap:clamp(12px,1.6vw,26px);
+  padding:10px clamp(16px,3vw,46px);background:linear-gradient(100deg,#22065C,#3A11A0 60%,#4B1BC4);color:#fff;flex-wrap:wrap}
+.bar img{height:19px;width:auto;display:block;flex:none}
+.bar .b1{font-size:11.5px;color:rgba(255,255,255,.72);white-space:nowrap}
+.bar .b2{flex:1;min-width:220px;font-size:10.5px;color:rgba(255,255,255,.55);line-height:1.6;
+  border-left:1px solid rgba(255,255,255,.18);padding-left:clamp(12px,1.6vw,26px)}
+.bar .b3{font-family:var(--fd);font-size:12px;font-weight:600;color:rgba(255,255,255,.66);white-space:nowrap}
+
+/* ══ 窄屏 ══ */
+@media (max-width:1180px){
+  .lic{grid-template-columns:1fr}
+  .why{grid-template-columns:1fr 1fr}
+}
+@media (max-width:980px){
+  :root{--gut:0px;--navh:58px}
+  .nav .lks,.nav .lang{display:none}
+  .nav .brand em{display:none}
+  .nav .cta{margin-left:auto;height:36px;padding:0 16px;font-size:13px}
+  .stage{grid-template-columns:1fr;gap:0;padding:0;min-height:0}
+  .me{border-radius:0;box-shadow:none}
+  .body{gap:0}
+  .pnl{background:#fff;border:0;border-radius:0;box-shadow:none;padding:22px 18px}
+  .pnl + .pnl{border-top:1px solid var(--line2)}
+  .lic{grid-template-columns:1fr 1fr;gap:9px}
+  .lc{padding:12px}
+  .lc .flag{position:static;align-self:flex-start;margin-bottom:8px}
+  .lc .lgo{height:32px;margin-bottom:9px}
+  .lc p{display:none}
+  .why{grid-template-columns:1fr 1fr;gap:9px}
+  .bar{flex-direction:column;align-items:flex-start;gap:8px;padding:16px 18px 24px}
+  .bar .b2{border-left:0;padding-left:0;min-width:0}
+}
+@media (max-width:520px){ .lic,.why{grid-template-columns:1fr} .cta2{grid-template-columns:1fr} }
+
+
+
+/* ══ 二维码弹层 ══ */
+.qrmask{position:fixed;inset:0;z-index:70;display:flex;align-items:center;justify-content:center;
+  padding:24px;background:rgba(16,10,48,.62);backdrop-filter:blur(4px)}
+.qrmask[hidden]{display:none}
+.qrbox{position:relative;width:100%;max-width:320px;background:#fff;border-radius:22px;
+  padding:26px 22px 22px;text-align:center;box-shadow:0 24px 60px rgba(16,10,48,.4)}
+.qrbox img{width:186px;height:186px;display:block;margin:0 auto 14px;background:#fff;border-radius:12px;padding:8px;
+  border:1px solid var(--line)}
+.qrbox b{display:block;font-size:16px;font-weight:800}
+.qrbox span{display:block;margin-top:7px;font-size:12px;color:var(--ink3);line-height:1.65}
+.qrx{position:absolute;right:12px;top:8px;width:32px;height:32px;border:0;background:none;cursor:pointer;
+  font-size:24px;line-height:1;color:var(--ink4)}
+.qrsave{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;margin-top:16px;height:46px;
+  border:0;border-radius:999px;cursor:pointer;font-family:inherit;font-size:14.5px;font-weight:800;color:#fff;
+  background:linear-gradient(120deg,#5B21E8,#9B3BF5);box-shadow:0 9px 20px rgba(91,33,232,.28)}
+.qrsave svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
+.tag2{display:none}
+
+/* ══════════ 桌面端：slide 透明化，直接参与网格 ══════════ */
+.slide{display:contents}
+.row.qrtile{display:none}
+@media (min-width:981px){
+  .idb .tag{display:none}
+  .idb .tag2{display:inline-block}
+  .me{grid-column:1;grid-row:1 / span 2;align-self:start}
+  #reg{grid-column:2;grid-row:1}
+  #why{grid-column:2;grid-row:2}
+}
+
+/* ══════════ 手机端：三屏纵向整屏滑动 ══════════ */
+.mhero,.mcta,.mban,.burg,.pager{display:none}
+
+@media (max-width:980px){
+  :root{--gut:0px;--navh:56px}
+  html,body{overflow-x:hidden}
+  .nav{position:sticky;top:0;padding:0 16px}
+  .nav .lks,.nav .brand em{display:none}
+  .nav .lang{margin-left:auto;font-size:13px}
+  .nav .cta{display:none}
+  .nav .burg{display:flex;flex-direction:column;justify-content:center;gap:4px;flex:none;
+    width:34px;height:34px;padding:0 5px;background:none;border:0;cursor:pointer}
+  .nav .burg i{display:block;height:2.4px;border-radius:2px;background:#1C1450}
+
+  .bg{background-image:url(../assets/m-bg.webp);background-position:center top;background-size:cover}
+  .bg::after{background:linear-gradient(180deg,rgba(255,255,255,.34),rgba(238,240,253,.16) 45%,rgba(228,231,252,.4))}
+
+  /* 纵向整屏滑动容器 */
+  .stage{display:block;overflow-y:auto;overflow-x:hidden;
+    scroll-snap-type:y proximity;-webkit-overflow-scrolling:touch;scrollbar-width:none;
+    gap:0;padding:0;min-height:0;height:calc(100svh - var(--navh))}
+  .stage::-webkit-scrollbar{display:none}
+  .slide{display:block;width:100%;min-height:100%;scroll-snap-align:start;scroll-snap-stop:always;
+    padding-bottom:64px}
+
+  /* ── 第 1 屏 ── */
+  .mhero{display:block;height:min(46vh,340px);margin:0;
+    background:url(../assets/m-hero.webp) center top/cover no-repeat}
+  .me{margin:-42px 14px 0;border-radius:20px;box-shadow:0 16px 40px rgba(28,18,90,.18)}
+  .me .hd{display:none}
+  .idb{margin-top:0;padding:16px 16px 0;display:grid;grid-template-columns:auto minmax(0,1fr);
+    column-gap:14px;align-items:center;text-align:left}
+  .av{width:82px;height:82px;flex:none;margin:0;grid-column:1;grid-row:1 / span 2;align-self:center}
+  .idb .nm{grid-column:2;grid-row:1;margin-top:0;font-size:21px}
+  .idb .nm span{margin-top:1px;font-size:9.5px;letter-spacing:.18em}
+  .idb .pos{display:none}
+  .idb .pos{display:none}
+  .idb .tag{display:inline-block;grid-column:2;grid-row:2;justify-self:start;margin-top:7px;
+    padding:5px 14px;font-size:12.5px;font-weight:800}
+  .idb .tag2{display:none}
+  .idb .quo{grid-column:1 / -1;grid-row:3;margin-top:13px;text-align:center;font-size:12.5px;padding:0}
+  .idb .quo::before{display:none}
+
+  /* 四宫格联系方式 */
+  .rows{margin-top:13px;padding:0 14px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+  .row{flex-direction:column;align-items:center;justify-content:flex-start;gap:7px;
+    padding:12px 5px 11px;text-align:center;min-height:104px;
+    background:#F6F4FD;border:1px solid var(--line);border-radius:14px;min-width:0}
+  .row + .row{border-top:1px solid var(--line)}
+  .row .tx{flex:1;width:100%;display:flex;flex-direction:column;justify-content:space-between;gap:4px}
+  .row .tx .v{display:block;margin:0;font-size:10.5px;font-weight:800;color:var(--ink);
+    line-height:1.3;white-space:normal;overflow:visible;text-overflow:clip;word-break:break-word}
+  .row .tx .l{display:block;font-size:10.5px;font-weight:700;color:var(--ink3);letter-spacing:0;line-height:1.2}
+  .row .go{display:none}
+  .ic{width:38px;height:38px;border-radius:12px}
+  .row.qrtile{display:flex}
+  .qr,.cta2{display:none}
+
+  .qr{margin:12px 14px 0}
+  .cta2{margin:11px 14px 0}
+  .mcta{display:flex;align-items:center;justify-content:center;gap:9px;
+    margin:12px 14px 0;height:52px;border-radius:15px;text-decoration:none;
+    background:linear-gradient(120deg,#2E17C9,#5B21E8);color:#fff;font-size:16px;font-weight:800;
+    box-shadow:0 12px 26px rgba(46,23,201,.32)}
+  .mcta svg{width:19px;height:19px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .mcta i{font-style:normal;font-size:20px;margin-left:2px;opacity:.8}
+  .mft{margin-top:12px;padding:12px 18px 18px}
+
+  /* ── 第 2、3 屏 ── */
+  .pnl{background:transparent;border:0;border-radius:0;box-shadow:none;padding:18px 14px}
+  .pnl + .pnl{border-top:0}
+  .hrow h2{font-size:26px}
+  .lic{grid-template-columns:1fr;gap:10px}
+  .lc{padding:14px;background:rgba(255,255,255,.96);box-shadow:0 8px 22px rgba(28,18,90,.08)}
+  .lc .flag{position:absolute;right:12px;top:12px;margin:0}
+  .lc .lgo{height:38px;margin-bottom:10px}
+  .lc p{display:block;font-size:12px}
+  .bdg{gap:8px}
+  .why{grid-template-columns:1fr 1fr;gap:10px}
+  .wc{background:rgba(255,255,255,.96);box-shadow:0 8px 22px rgba(28,18,90,.07)}
+  .wc b{font-size:13px}
+  .wc span{font-size:11.5px;line-height:1.6}
+
+  .mban{display:flex;align-items:center;margin:14px 0 0;height:120px;border-radius:16px;overflow:hidden;
+    background:url(../assets/m-banner.webp) center/cover no-repeat;text-decoration:none}
+  .mban + .mcta{margin-left:0;margin-right:0}
+
+  /* 页码 */
+  .pager{display:flex;align-items:center;justify-content:space-between;gap:14px;
+    position:fixed;left:0;right:0;bottom:0;z-index:20;height:52px;padding:0 22px;
+    background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.96) 42%)}
+  .pager .dots{display:flex;gap:7px}
+  .pager .dots b{display:block;width:7px;height:7px;border-radius:50%;background:#C9C4E4;transition:.25s}
+  .pager .dots b.on{background:var(--pv);width:20px;border-radius:4px}
+  .pager .pn{font-family:var(--fd);font-size:12px;font-weight:700;color:var(--ink3)}
+  .pager .pn em{font-style:normal;color:var(--pv);font-weight:800}
+
+  .bar{display:none}
+}
+@media (max-width:520px){ .cta2{grid-template-columns:1fr 1fr} }
+
+#toast{position:fixed;left:50%;bottom:70px;transform:translate(-50%,14px);z-index:60;
+  background:rgba(20,11,46,.94);color:#fff;font-size:13.5px;font-weight:700;padding:11px 20px;border-radius:999px;
+  opacity:0;pointer-events:none;transition:opacity .22s,transform .22s}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){ *{transition:none!important} }
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="brand" href="./"><img src="../assets/rg-logo.png" alt="RockGlobal"><em>Trade Global　Grow Together</em></a>
+  <nav class="lks">
+    <a href="https://www.rockglobal.co.nz/" target="_blank" rel="noopener noreferrer">关于我们</a>
+    <a href="https://www.rockglobal.co.nz/" target="_blank" rel="noopener noreferrer">交易产品</a>
+    <a href="https://www.rockglobal.co.nz/" target="_blank" rel="noopener noreferrer">交易平台</a>
+    <a class="on" href="#reg">监管与安全</a>
+    <a href="#why">机构合作</a>
+    <a href="tel:+642041327820">联系我们</a>
+  </nav>
+  <span class="lang"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15 0 18M12 3c-2.5 2.7-2.5 15 0 18"/></svg>中文</span>
+  <a class="cta" href="tel:+642041327820">开立真实账户 <span>→</span></a>
+  <button class="burg" type="button" id="burg" aria-label="菜单"><i></i><i></i><i></i></button>
+</header>
+
+<main class="stage" id="stage">
+
+  <!-- ────── 1/3 ────── -->
+  <section class="slide s1">
+  <a class="mhero" href="#reg" aria-hidden="true"></a>
+  <aside class="me">
+    <div class="hd">
+      <div class="hl">
+        <img src="../assets/rg-logo-dark.png" alt="RockGlobal">
+        <span>Rockfort Markets Limited</span>
+      </div>
+      <div class="hw">连接全球<br>创造更多可能</div>
+    </div>
+
+    <div class="idb">
+      <img class="av" src="../assets/mei-photo.webp?v=2" alt="梅龙龙" width="560" height="560">
+      <h1 class="nm">梅龙龙<span>LONGLONG MEI</span></h1>
+      <div class="pos">客户经理（B 端）</div>
+      <div class="tag">客户经理（B 端）</div>
+      <div class="tag2">机构 · 资管 · 代理</div>
+      <p class="quo">以专业的服务，连接全球市场<br>助力您的业务持续增长</p>
+    </div>
+
+    <div class="rows">
+      <a class="row" href="tel:+642041327820">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></span>
+        <span class="tx"><span class="v">+64 20 4132 7820</span><span class="l">手机</span></span>
+        <span class="go">拨打</span>
+      </a>
+      <a class="row" href="mailto:meilonglong2@gmail.com">
+        <span class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></span>
+        <span class="tx"><span class="v">meilonglong2<br>@gmail.com</span><span class="l">邮箱</span></span>
+        <span class="go">发送</span>
+      </a>
+      <button class="row" type="button" id="wxrow">
+        <span class="ic wx"><svg viewBox="0 0 24 24"><path d="M21 12.5c0 3.2-3.1 5.8-7 5.8-.8 0-1.6-.1-2.3-.3L8 19.5l.6-2.4C6.4 16 5 14.4 5 12.5 5 9.3 8.1 6.7 12 6.7s9 2.6 9 5.8Z"/></svg></span>
+        <span class="tx"><span class="v">与手机号同号<br>点击复制</span><span class="l">微信号</span></span>
+        <span class="go">复制</span>
+      </button>
+      <button class="row qrtile" type="button" id="qrtile">
+        <span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v3M14 20h3M20 20h1"/></svg></span>
+        <span class="tx"><span class="v">扫码打开<br>这张名片</span><span class="l">二维码</span></span>
+        <span class="go">查看</span>
+      </button>
+    </div>
+
+    <div class="qr">
+      <img src="../assets/qr-card.svg" alt="扫码打开这张电子名片" width="64" height="64">
+      <div>
+        <div class="qt">扫码打开这张名片</div>
+        <div class="qs">添加后请备注：机构 / 公司名称<br>我们将尽快与您联系</div>
+      </div>
+    </div>
+
+    <div class="cta2">
+      <button class="btn p" type="button" id="wxbtn">
+        <svg viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8"/></svg>复制微信号
+      </button>
+      <button class="btn s" type="button" id="vcf">
+        <svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 21h16"/></svg>保存名片
+      </button>
+    </div>
+
+    <a class="mcta" href="tel:+642041327820">
+      <svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/></svg>
+      立即咨询我 <i>›</i>
+    </a>
+
+    <div class="mft">
+      专业 · 合规 · 专注 · 长期合作
+      <div class="hits" id="hits" hidden>累计被打开 <b id="hitn">—</b> 次</div>
+    </div>
+  </aside>
+  </section>
+
+  <!-- ────── 2/3 ────── -->
+  <section class="slide s2">
+    <section class="pnl" id="reg">
+      <span class="pill"><svg viewBox="0 0 24 24"><path d="M12 3 20 6v5c0 5.1-3.4 8.4-8 10-4.6-1.6-8-4.9-8-10V6l8-3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg>合规经营 · 信息公开</span>
+      <div class="hrow">
+        <h2>监管注册与牌照</h2><em>REGULATION &amp; LICENCE</em>
+        <a href="https://fsp-register.companiesoffice.govt.nz/" target="_blank" rel="noopener noreferrer">公开可查 · 点击核实 →</a>
+      </div>
+      <p class="lead">Rockfort Markets Limited 在新西兰注册成立，并在新西兰金融服务提供者注册系统完成登记。<b>主体名称、企业编号与 FSP 编号全部公开可查</b>，欢迎在官方渠道逐一核实。</p>
+
+      <div class="lic">
+        <a class="lc" href="https://www.fma.govt.nz/" target="_blank" rel="noopener noreferrer">
+          <span class="flag">新西兰</span>
+          <div class="lgo"><img src="../assets/lic-fma.webp" alt="新西兰金融市场管理局 FMA" width="520" height="223" loading="lazy"></div>
+          <h3>新西兰 FMA 监管框架<span>金融市场管理局</span></h3>
+          <p>Rockfort Markets Limited 遵守新西兰金融市场管理局（FMA）的相关监管要求，合规开展金融服务业务。</p>
+          <dl class="fo"><dt>监管机构</dt><dd>FMA</dd><span class="q">官网查询 →</span></dl>
+        </a>
+
+        <a class="lc" href="https://companies-register.companiesoffice.govt.nz/" target="_blank" rel="noopener noreferrer">
+          <span class="flag">新西兰</span>
+          <div class="lgo"><img src="../assets/lic-nzco.webp" alt="新西兰公司注册处" width="520" height="251" loading="lazy"></div>
+          <h3>新西兰公司注册信息<span>Companies Office</span></h3>
+          <p>公司名称 Rockfort Markets Limited，已在新西兰公司注册处完成登记，主体信息公开透明。</p>
+          <dl class="fo"><dt>NZBN</dt><dd>9429042010807</dd><span class="q">官网查询 →</span></dl>
+        </a>
+
+        <a class="lc" href="https://fsp-register.companiesoffice.govt.nz/" target="_blank" rel="noopener noreferrer">
+          <span class="flag">新西兰</span>
+          <div class="lgo sq"><img src="../assets/lic-fspr.webp" alt="" width="300" height="312" loading="lazy"><b>FINANCIAL SERVICE<br>PROVIDERS REGISTER</b></div>
+          <h3>金融服务提供者注册<span>FSPR</span></h3>
+          <p>已在新西兰金融服务提供者注册系统（FSPR）完成注册，注册信息与服务类别公开可查。</p>
+          <dl class="fo"><dt>FSP 编号</dt><dd>FSP509766</dd><span class="q">官网查询 →</span></dl>
+        </a>
+      </div>
+
+      <div class="bdg">
+        <span class="bd"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.3-4.3"/></svg>公司背景可查</span>
+        <span class="bd"><svg viewBox="0 0 24 24"><path d="M12 3 20 6v5c0 5.1-3.4 8.4-8 10-4.6-1.6-8-4.9-8-10V6l8-3Z"/></svg>注册信息可核实</span>
+        <span class="bd"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>客户资金隔离存放</span>
+        <span class="bd"><svg viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>交易条件公开透明</span>
+        <span class="bd"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 9h10M7 13h6"/></svg>MT4 / MT5 双平台</span>
+      </div>
+    </section>
+  </section>
+
+  <!-- ────── 3/3 ────── -->
+  <section class="slide s3">
+    <section class="pnl" id="why">
+      <div class="hrow">
+        <h2>为什么值得和我们谈</h2><em>WHY ROCKGLOBAL</em>
+        <a href="tel:+642041327820">选择更专业的合作伙伴 →</a>
+      </div>
+      <div class="why">
+        <div class="wc">
+          <div class="wi"><svg viewBox="0 0 24 24"><path d="M12 3 20 6v5c0 5.1-3.4 8.4-8 10-4.6-1.6-8-4.9-8-10V6l8-3Z"/></svg></div>
+          <b>受监管的新西兰主体</b><span>在成熟市场环境下运营，主体与编号全部公开可查。</span>
+        </div>
+        <div class="wc">
+          <div class="wi"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+          <b>客户资金隔离存放</b><span>客户资金与公司自有资金分开管理，保障客户资产安全。</span>
+        </div>
+        <div class="wc">
+          <div class="wi"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg></div>
+          <b>机构级服务</b><span>为机构、资管及代理伙伴提供技术支持与专属服务群。</span>
+        </div>
+        <div class="wc">
+          <div class="wi"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m7 15 4-5 3 3 5-7"/></svg></div>
+          <b>有竞争力的定价</b><span>点差与执行质量可先实测再谈，机构客户可自行对比。</span>
+        </div>
+        <div class="wc">
+          <div class="wi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18"/></svg></div>
+          <b>全球交易产品</b><span>覆盖外汇、贵金属、指数、能源、股票 CFD 等品种。</span>
+        </div>
+        <div class="wc">
+          <div class="wi"><svg viewBox="0 0 24 24"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="2" y="14" width="4" height="6" rx="2"/><rect x="18" y="14" width="4" height="6" rx="2"/></svg></div>
+          <b>7×24 客户支持</b><span>工作时间 5 分钟内响应，重点客户专属服务群随时在线。</span>
+        </div>
+      </div>
+
+      <a class="mban" href="tel:+642041327820" aria-label="与世界共建更大的机遇"></a>
+      <a class="mcta" href="tel:+642041327820">
+        <svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/></svg>
+        立即咨询我 <i>›</i>
+      </a>
+    </section>
+  </section>
+
+</main>
+
+<div class="pager" id="pager" hidden>
+  <div class="dots"><b class="on"></b><b></b><b></b></div>
+  <span class="pn"><em>1</em> / 3</span>
+</div>
+
+<footer class="bar">
+  <img src="../assets/rg-logo-dark.png" alt="RockGlobal">
+  <span class="b1">Rockfort Markets Limited　·　全球视野 · 专业服务 · 长期价值</span>
+  <span class="b2">风险提示：差价合约（CFD）和外汇交易涉及高风险，可能导致您损失全部本金，并不适合所有投资者。请确保您充分了解相关风险。本页仅供信息参考，不构成投资建议。</span>
+  <span class="b3">Trade Global　Grow Together</span>
+</footer>
+
+<div class="qrmask" id="qrmask" hidden>
+  <div class="qrbox">
+    <button class="qrx" type="button" id="qrx" aria-label="关闭">×</button>
+    <img src="../assets/qr-card.svg" alt="扫码打开这张电子名片" width="200" height="200">
+    <b>扫码打开这张名片</b>
+    <span>转发给同事、贴进邮件签名都可以<br>比直接发微信号更安全，也更容易被打开</span>
+    <button class="qrsave" type="button" id="vcf2">
+      <svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 21h16"/></svg>保存名片到通讯录
+    </button>
+  </div>
+</div>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  var toastEl=document.getElementById('toast'),tmr;
+  function toast(m){toastEl.textContent=m;toastEl.classList.add('on');clearTimeout(tmr);tmr=setTimeout(function(){toastEl.classList.remove('on');},1900);}
+  var NUM='+64 20 4132 7820';
+  function copy(text,ok){
+    if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(ok,fb);}else{fb();}
+    function fb(){var ta=document.createElement('textarea');ta.value=text;ta.setAttribute('readonly','');
+      ta.style.cssText='position:fixed;top:-999px;opacity:0';document.body.appendChild(ta);ta.select();
+      try{document.execCommand('copy');ok();}catch(e){toast('复制失败，请长按号码手动复制');}document.body.removeChild(ta);}
+  }
+  function doCopy(){copy(NUM,function(){toast('微信号已复制：'+NUM);});}
+  document.getElementById('wxrow').addEventListener('click',doCopy);
+  document.getElementById('wxbtn').addEventListener('click',doCopy);
+
+  function saveVcf(){
+    var v=['BEGIN:VCARD','VERSION:3.0','N:梅;龙龙;;;','FN:梅龙龙 Longlong Mei',
+      'ORG:Rockfort Markets Limited (RockGlobal)','TITLE:客户经理（B 端）',
+      'TEL;TYPE=CELL:+64 20 4132 7820','EMAIL;TYPE=WORK:meilonglong2@gmail.com',
+      'ADR;TYPE=WORK:;;Auckland;;;;New Zealand','URL:'+location.origin+location.pathname,
+      'NOTE:机构 · 资管 · 代理客户对接。微信与手机号相同。','END:VCARD'].join('\r\n');
+    var blob=new Blob([new Uint8Array([0xEF,0xBB,0xBF]),v],{type:'text/vcard;charset=utf-8'});
+    var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='MeiLonglong-RockGlobal.vcf';
+    document.body.appendChild(a);a.click();document.body.removeChild(a);
+    setTimeout(function(){URL.revokeObjectURL(a.href);},1500);
+    toast('名片已保存到通讯录文件');
+  }
+  document.getElementById('vcf').addEventListener('click',saveVcf);
+  var v2=document.getElementById('vcf2'); if(v2)v2.addEventListener('click',saveVcf);
+
+  /* 二维码弹层 */
+  (function(){
+    var mask=document.getElementById('qrmask'),x=document.getElementById('qrx');
+    if(!mask)return;
+    function open(){mask.hidden=false;}
+    function close(){mask.hidden=true;}
+    var t=document.getElementById('qrtile');
+    if(t)t.addEventListener('click',function(e){e.preventDefault();e.stopImmediatePropagation();open();},true);
+    x.addEventListener('click',close);
+    mask.addEventListener('click',function(e){if(e.target===mask)close();});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+  })();
+
+  /* 手机端三屏指示器 */
+  (function(){
+    var stage=document.getElementById('stage'),pager=document.getElementById('pager');
+    if(!stage||!pager)return;
+    var dots=pager.querySelectorAll('.dots b'),num=pager.querySelector('.pn em'),cur=-1;
+    var slides=[].slice.call(stage.querySelectorAll('.slide'));
+    function idxAt(y){
+      var i=0;
+      for(var k=0;k<slides.length;k++){ if(slides[k].offsetTop<=y+stage.clientHeight*0.35)i=k; }
+      return i;
+    }
+    function upd(){
+      if(getComputedStyle(pager).display==='none')return;
+      var i=idxAt(stage.scrollTop);
+      if(i===cur)return; cur=i;
+      for(var k=0;k<dots.length;k++)dots[k].classList.toggle('on',k===i);
+      num.textContent=i+1;
+    }
+    function show(){ pager.hidden = window.matchMedia('(min-width:981px)').matches; }
+    stage.addEventListener('scroll',function(){window.requestAnimationFrame(upd);},{passive:true});
+    window.addEventListener('resize',function(){show();cur=-1;upd();});
+    show();upd();
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener('click',function(e){
+        var t=document.querySelector(a.getAttribute('href'));
+        if(!t||getComputedStyle(pager).display==='none')return;
+        e.preventDefault();
+        var sl=t.closest('.slide');
+        if(sl)stage.scrollTo({top:sl.offsetTop,behavior:'smooth'});
+      });
+    });
+    var b=document.getElementById('burg');
+    if(b)b.addEventListener('click',function(){
+      var i=idxAt(stage.scrollTop);
+      stage.scrollTo({top:slides[(i+1)%slides.length].offsetTop,behavior:'smooth'});
+    });
+  })();
+
+  (function(){
+    var box=document.getElementById('hits'),n=document.getElementById('hitn');
+    var BASE='https://abacus.jasoncameron.dev',NS='rockfort-card',KEY='opens',counted=false;
+    try{counted=sessionStorage.getItem('rg_counted')==='1';}catch(e){}
+    fetch(BASE+(counted?'/get/':'/hit/')+NS+'/'+KEY,{cache:'no-store'})
+      .then(function(r){return r.ok?r.json():Promise.reject();})
+      .then(function(d){if(typeof d.value!=='number')return;
+        try{sessionStorage.setItem('rg_counted','1');}catch(e){}
+        n.textContent=d.value.toLocaleString('en-US');box.hidden=false;})
+      .catch(function(){});
+  })();
+})();
+</script>
+</body>
+</html>
