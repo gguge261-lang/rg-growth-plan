@@ -45,3 +45,35 @@
 .g13-dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:calc(var(--s)*.45) calc(var(--s)*.7);margin:calc(var(--s)*.6) 0 0;padding:calc(var(--s)*.7) calc(var(--s)*.8);border-radius:calc(var(--s)*.8);background:#fcf2fc}
 .g13-dl dt{padding:calc(var(--s)*.1) calc(var(--s)*.5);border-radius:calc(var(--s)*.4);background:#f7d4f5;color:#9c1487;font-size:calc(var(--s)*.7);font-weight:800;white-space:nowrap;align-self:start}
 .g13-dl dd{margin:0;font-size:calc(var(--s)*.82);line-height:1.6;color:#4d4564}
+
+/* ---------- 拆成两页后：第 13 页两列、第 14 页负责人 ---------- */
+.g13-cols.two{grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--s)*2)}
+.g13-cols.two h3,.g14-cols h3{font-size:calc(var(--s)*1.25)}
+.g13-cols.two p,.g14-cols p{font-size:calc(var(--s)*.98)!important;line-height:1.75!important}
+.g13-cols.two .g13-dl dd,.g14-cols .g13-phase p{font-size:calc(var(--s)*.94)!important}
+.g13-cols.two .g13-dl dt{font-size:calc(var(--s)*.78)}
+.g13-cols.two article,.g14-cols article{padding:calc(var(--s)*1.2) calc(var(--s)*1.5)}
+.g13-cols.two .c-lead article.big{flex:2 1 0}
+.g13-cols.two>.g13-col>header small{font-size:calc(var(--s)*.86)}
+
+.g14-cols{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:calc(var(--s)*2)}
+.g14-cols .c-ai .role{background:linear-gradient(135deg,#7c3aed,#c026d3)}
+.g14-cols .c-ai article{border-left-color:#9b4df0;flex:1 1 0}
+.g14-cols .g13-phase{margin-top:calc(var(--s)*1.1);padding:calc(var(--s)*1.1) calc(var(--s)*1.2)}
+.g14-cols .g13-phase i{font-size:calc(var(--s)*.8)}
+
+/* 字号再放大，填满拆页后多出的空间 */
+.g13-cols.two h3{font-size:calc(var(--s)*1.38)}
+.g13-cols.two p{font-size:calc(var(--s)*1.08)!important}
+.g13-cols.two .g13-dl dd{font-size:calc(var(--s)*1.02)!important;line-height:1.65}
+.g13-cols.two .g13-dl{gap:calc(var(--s)*.6) calc(var(--s)*.8);padding:calc(var(--s)*.9) calc(var(--s)*1)}
+.g14-cols h3{font-size:calc(var(--s)*1.65)}
+.g14-cols p{font-size:calc(var(--s)*1.2)!important;line-height:1.8!important}
+.g14-cols .g13-phase p{font-size:calc(var(--s)*1.15)!important}
+.g14-cols .g13-phase{margin-top:calc(var(--s)*1.4);padding:calc(var(--s)*1.4) calc(var(--s)*1.5)}
+.g14-cols .g13-phase i{font-size:calc(var(--s)*.9);padding:calc(var(--s)*.25) calc(var(--s)*.7)}
+.g14-cols article{padding:calc(var(--s)*1.6) calc(var(--s)*1.8)}
+.g14-cols .g13-col>header small{font-size:calc(var(--s)*.9)}
+.g14-cols{align-items:center}
+.g14-cols .g13-col{justify-content:center;gap:calc(var(--s)*1.1)}
+.g14-cols .g13-col article,.g14-cols .c-ai article{flex:none}
