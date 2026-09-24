@@ -54,7 +54,7 @@
 .g11-group.agent ul{grid-template-columns:repeat(2,minmax(0,1fr))}
 
 /* ---------- 底部：一天的工作流 + 署名 ---------- */
-.g11-bar{flex:none;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:calc(var(--s)*1.4);margin:calc(var(--s)*1.1) max(calc(var(--s)*20.5),300px) 0 0;padding:calc(var(--s)*.9) calc(var(--s)*1.4);border:1px solid rgba(73,41,150,.06);border-radius:calc(var(--s)*1.3);background:rgba(255,255,255,.94);box-shadow:0 calc(var(--s)*.7) calc(var(--s)*2) rgba(73,41,150,.08)}
+.g11-bar{flex:none;display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:calc(var(--s)*1.4);margin:calc(var(--s)*1.1) max(calc(var(--s)*20.5),300px) 0 0;padding:calc(var(--s)*.9) calc(var(--s)*1.4);border:1px solid rgba(73,41,150,.06);border-radius:calc(var(--s)*1.3);background:rgba(255,255,255,.94);box-shadow:0 calc(var(--s)*.7) calc(var(--s)*2) rgba(73,41,150,.08)}
 .g11-bar-label{padding-right:calc(var(--s)*1.4);border-right:1px solid #eae5f6}
 .g11-bar-label b{display:block;font-size:calc(var(--s)*1.05);font-weight:800;color:#15112a;white-space:nowrap}
 .g11-bar-label small{display:block;margin-top:calc(var(--s)*.25);font-size:calc(var(--s)*.72);color:#8a82a3;white-space:nowrap}

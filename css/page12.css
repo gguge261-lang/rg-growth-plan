@@ -1,0 +1,79 @@
+/* ===========================================================
+   page12.css — RG Ai 万象
+   左：主张 + 三个事实 / 中：万象对话界面（HTML 还原，回答正文用占位线，不编造答案）
+   右：四个角色各解决什么 / 底：为什么答案可信
+   缩放单位与底部条规则同第 08–11 页
+   =========================================================== */
+
+.g12-page{--s:min(1vw,calc(var(--page-h)*.0178),calc((100vw - 2*var(--deck-pad-x))/96),16.6px);background:radial-gradient(34% 58% at 52% 46%,rgba(206,186,255,.55),transparent 70%),linear-gradient(135deg,#fdfcff 0%,#f7f4ff 50%,#f0ebff 100%)}
+
+.g12-grid{flex:1;display:grid;grid-template-columns:minmax(0,33fr) minmax(0,31fr) minmax(0,36fr);grid-template-rows:minmax(0,1fr);column-gap:calc(var(--s)*2.2);min-height:0}
+
+/* ---------- 左 ---------- */
+.g12-left{display:flex;flex-direction:column;justify-content:center;min-width:0}
+.g12-meta{display:flex;align-items:flex-start;gap:calc(var(--s)*2)}
+.g12-meta .dk-head-no{padding-top:0}
+.g12-meta .eyebrow{margin:0}
+.g12-title{margin:calc(var(--s)*1.8) 0 0!important;font-size:calc(var(--s)*2.55)!important;line-height:1.3!important;letter-spacing:-.02em!important;font-weight:800;color:#15112a;white-space:nowrap}
+.g12-title em{font-style:normal;background:linear-gradient(90deg,#7c3aed,#c026d3);-webkit-background-clip:text;background-clip:text;color:transparent}
+.g12-desc{margin:calc(var(--s)*1.5) 0 0!important;max-width:none!important;font-size:calc(var(--s)*.95)!important;line-height:1.8!important;color:#4d4564!important}
+.g12-desc b{color:#15112a}
+.g12-proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--s)*.7);margin:calc(var(--s)*2.2) 0 0;padding:0;list-style:none}
+.g12-proof li{padding:calc(var(--s)*.9) calc(var(--s)*1);border:1px solid rgba(124,58,237,.12);border-radius:calc(var(--s)*1);background:rgba(255,255,255,.8)}
+.g12-proof b{display:block;font-size:calc(var(--s)*1.15);font-weight:800;background:linear-gradient(90deg,#7c3aed,#c026d3);-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap}
+.g12-proof span{display:block;margin-top:calc(var(--s)*.3);font-size:calc(var(--s)*.72);line-height:1.45;color:#6d6585}
+
+/* ---------- 中：对话界面 ---------- */
+.g12-center{position:relative;display:flex;flex-direction:column;justify-content:center;gap:calc(var(--s)*1.2);min-width:0;min-height:0}
+.g12-app{display:flex;flex-direction:column;width:100%;max-height:100%;border:1px solid rgba(124,58,237,.14);border-radius:calc(var(--s)*1.5);background:#fff;box-shadow:0 calc(var(--s)*2) calc(var(--s)*4) rgba(55,25,130,.16);overflow:hidden}
+.g12-app-top{display:flex;align-items:center;gap:calc(var(--s)*.45);padding:calc(var(--s)*.9) calc(var(--s)*1.2);border-bottom:1px solid #f0ecf8}
+.g12-app-top img{width:calc(var(--s)*1.6);height:calc(var(--s)*1.6)}
+.g12-app-top b{font-size:calc(var(--s)*1);font-weight:800;color:#15112a}
+.g12-app-top i{padding:1px calc(var(--s)*.35);border-radius:calc(var(--s)*.3);background:#f1e9ff;color:#7c3aed;font:700 calc(var(--s)*.6)/1.5 "Inter",sans-serif;font-style:normal}
+.g12-app-top span{margin-left:auto;padding:calc(var(--s)*.3) calc(var(--s)*.7);border-radius:99px;background:#f6f3fd;font-size:calc(var(--s)*.72);font-weight:700;color:#4d4564}
+.g12-app-top span em{font-style:normal;color:#9a90b5}
+.g12-app-body{display:flex;flex-direction:column;gap:calc(var(--s)*1);padding:calc(var(--s)*1.2)}
+.g12-q{align-self:flex-end;max-width:82%;padding:calc(var(--s)*.7) calc(var(--s)*1);border-radius:calc(var(--s)*1) calc(var(--s)*1) calc(var(--s)*.3) calc(var(--s)*1);background:#f3eeff;font-size:calc(var(--s)*.85);color:#231b3d}
+.g12-a-head{display:flex;align-items:center;gap:calc(var(--s)*.4)}
+.g12-a-head img{width:calc(var(--s)*1.3);height:calc(var(--s)*1.3)}
+.g12-a-head b{font-size:calc(var(--s)*.8);font-weight:800;background:linear-gradient(90deg,#7c3aed,#c026d3);-webkit-background-clip:text;background-clip:text;color:transparent}
+.g12-a-head span{font-size:calc(var(--s)*.7);color:#9a90b5}
+.g12-a-head span em{font-style:normal}
+.g12-lines{display:grid;gap:calc(var(--s)*.55);margin:calc(var(--s)*.8) 0 0 calc(var(--s)*1.7)}
+.g12-lines i{display:block;height:calc(var(--s)*.6);border-radius:99px;background:linear-gradient(90deg,#ece7f7,#f5f2fb)}
+.g12-src{display:flex;flex-wrap:wrap;align-items:center;gap:calc(var(--s)*.4);margin:calc(var(--s)*.9) 0 0 calc(var(--s)*1.7)}
+.g12-src small{font-size:calc(var(--s)*.66);color:#9a90b5}
+.g12-src span{padding:calc(var(--s)*.22) calc(var(--s)*.6);border:1px solid #e6def8;border-radius:99px;font-size:calc(var(--s)*.66);color:#5a2ad8;background:#faf8ff}
+.g12-src span.more{color:#9a90b5}
+.g12-sugg{display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--s)*.45);padding-top:calc(var(--s)*.9);border-top:1px dashed #ece7f7}
+.g12-sugg small{grid-column:1/-1;display:flex;justify-content:space-between;font-size:calc(var(--s)*.66);color:#9a90b5}
+.g12-sugg small em{font-style:normal;color:#7c3aed}
+.g12-sugg span{padding:calc(var(--s)*.5) calc(var(--s)*.65);border:1px solid #efeaf8;border-radius:calc(var(--s)*.6);font-size:calc(var(--s)*.7);line-height:1.4;color:#4d4564;background:#fcfbff}
+.g12-input{display:flex;align-items:center;margin:0 calc(var(--s)*1.2) calc(var(--s)*1.2);padding:calc(var(--s)*.7) calc(var(--s)*.7) calc(var(--s)*.7) calc(var(--s)*1.1);border:1px solid #e6def8;border-radius:99px;font-size:calc(var(--s)*.76);color:#a79fbd}
+.g12-input i{width:calc(var(--s)*1.7);height:calc(var(--s)*1.7);margin-left:auto;border-radius:50%;background:linear-gradient(140deg,#7c3aed,#c026d3)}
+.g12-hand{position:relative;z-index:2;align-self:flex-start;margin-left:calc(var(--s)*1);font-family:"Zhi Mang Xing","STKaiti","KaiTi",cursive;font-size:calc(var(--s)*1.25);line-height:1.45;color:#7c3aed;white-space:nowrap;rotate:-8deg;pointer-events:none}
+
+/* ---------- 右：四个角色 ---------- */
+.g12-right{display:flex;flex-direction:column;justify-content:center;gap:calc(var(--s)*.8);min-width:0}
+.g12-right-label{font-size:calc(var(--s)*.8);font-weight:800;letter-spacing:.08em;color:#8a82a3}
+.g12-tiers{display:grid;gap:calc(var(--s)*.7);margin:0;padding:0;list-style:none}
+.g12-tiers li{display:flex;align-items:flex-start;gap:calc(var(--s)*1);padding:calc(var(--s)*1) calc(var(--s)*1.2);border:1px solid rgba(73,41,150,.07);border-radius:calc(var(--s)*1.1);background:rgba(255,255,255,.94);box-shadow:0 calc(var(--s)*.5) calc(var(--s)*1.6) rgba(73,41,150,.07)}
+.g12-tiers li>span{display:grid;place-items:center;min-width:calc(var(--s)*4.2);padding:calc(var(--s)*.35) calc(var(--s)*.5);flex:none;border-radius:99px;font-size:calc(var(--s)*.76);font-weight:800;color:#fff;white-space:nowrap}
+.g12-tiers .t1{background:#a58df0}
+.g12-tiers .t2{background:#8b62ec}
+.g12-tiers .t3{background:#7c3aed}
+.g12-tiers .t4{background:linear-gradient(135deg,#7c3aed,#c026d3)}
+.g12-tiers b{display:block;font-size:calc(var(--s)*.98);font-weight:800;color:#15112a}
+.g12-tiers p{margin:calc(var(--s)*.3) 0 0!important;font-size:calc(var(--s)*.78)!important;line-height:1.6!important;color:#6d6585!important}
+
+/* ---------- 底部 ---------- */
+.g12-bar{flex:none;display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:calc(var(--s)*1.4);margin:calc(var(--s)*1.1) max(calc(var(--s)*20.5),300px) 0 0;padding:calc(var(--s)*.9) calc(var(--s)*1.4);border:1px solid rgba(73,41,150,.06);border-radius:calc(var(--s)*1.3);background:rgba(255,255,255,.94);box-shadow:0 calc(var(--s)*.7) calc(var(--s)*2) rgba(73,41,150,.08)}
+.g12-bar-label{padding-right:calc(var(--s)*1.4);border-right:1px solid #eae5f6}
+.g12-bar-label b{display:block;font-size:calc(var(--s)*1.05);font-weight:800;color:#15112a;white-space:nowrap}
+.g12-bar-label small{display:block;margin-top:calc(var(--s)*.25);font-size:calc(var(--s)*.72);color:#8a82a3;white-space:nowrap}
+.g12-bar ol{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--s)*1);margin:0;padding:0;list-style:none}
+.g12-bar li{display:flex;align-items:center;gap:calc(var(--s)*.6);min-width:0}
+.g12-bar li>i{display:grid;place-items:center;width:calc(var(--s)*1.7);height:calc(var(--s)*1.7);flex:none;border-radius:50%;background:#dcf5e5;color:#17944a;font-size:calc(var(--s)*.8);font-weight:800;font-style:normal}
+.g12-bar li>div{min-width:0}
+.g12-bar li b{display:block;font-size:calc(var(--s)*.88);font-weight:800;color:#15112a;white-space:nowrap}
+.g12-bar li small{display:block;margin-top:calc(var(--s)*.2);font-size:calc(var(--s)*.68);color:#6d6585;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}

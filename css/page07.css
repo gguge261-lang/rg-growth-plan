@@ -87,6 +87,7 @@
 .g7-lic-card a{display:flex;align-items:center;gap:calc(var(--s)*.7);margin-top:calc(var(--s)*.7);padding:calc(var(--s)*.6) calc(var(--s)*.7);border-radius:calc(var(--s)*.7);background:#f7f6fb;text-decoration:none;transition:background .2s}
 .g7-lic-card a:hover{background:#efeaff}
 .g7-lic-card a>img{width:calc(var(--s)*3.8);height:calc(var(--s)*1.8);flex:none;object-fit:contain;object-position:left center}
+.g7-lic-mark{display:grid;place-items:center;width:calc(var(--s)*3.8);height:calc(var(--s)*1.8);flex:none;border-radius:calc(var(--s)*.4);background:#0b2a5b;color:#fff;font:800 calc(var(--s)*.78)/1 "Inter",sans-serif;letter-spacing:.08em}
 .g7-lic-card a>img.doc{object-position:center;width:calc(var(--s)*3.8)}
 .g7-lic-card a>div{flex:1;min-width:0}
 .g7-lic-card a b{display:block;font-size:calc(var(--s)*.76);font-weight:800;color:#231b3d;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
