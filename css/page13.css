@@ -105,3 +105,6 @@
   .g14-cols .g13-col{gap:calc(var(--s)*.5)}
   .g14-cols p{font-size:calc(var(--s)*.82)!important;line-height:1.55!important}
 }
+.g14-roles{display:flex;flex-wrap:wrap;gap:calc(var(--s)*.3);margin:calc(var(--s)*.45) 0 0;padding:0;list-style:none}
+.g14-roles li{padding:calc(var(--s)*.12) calc(var(--s)*.5);border:1px solid #e6def8;border-radius:99px;background:#faf8ff;font-size:calc(var(--s)*.72);color:#8a82a3;text-decoration:line-through;text-decoration-color:rgba(224,105,15,.7)}
+@media(min-width:861px) and (max-width:1200px){.g14-cols .g13-col{gap:calc(var(--s)*.4)}}
