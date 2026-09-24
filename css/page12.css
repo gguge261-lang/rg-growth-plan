@@ -126,3 +126,9 @@
 .g12-sugg{margin-top:auto}
 .g12-right{justify-content:flex-start}
 .g12-tiers{flex:1;grid-auto-rows:1fr}
+
+/* ---------- 右下：下一步 ---------- */
+.g12-next{display:flex;align-items:flex-start;gap:calc(var(--s)*.7);flex:none;padding:calc(var(--s)*.8) calc(var(--s)*1.1);border:1px dashed #f3b27a;border-radius:calc(var(--s)*1.1);background:linear-gradient(120deg,#fff6ec,#fcefff)}
+.g12-next i{flex:none;margin-top:calc(var(--s)*.1);padding:calc(var(--s)*.15) calc(var(--s)*.55);border-radius:calc(var(--s)*.4);background:#ffd9b0;color:#b45c0c;font-size:calc(var(--s)*.7);font-weight:800;font-style:normal;white-space:nowrap}
+.g12-next p{margin:0!important;font-size:calc(var(--s)*.78)!important;line-height:1.6!important;color:#5d5670!important}
+.g12-next p b{color:#15112a}

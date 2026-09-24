@@ -23,8 +23,8 @@
   <link rel="stylesheet" href="css/page10.css?v=d1">
   <link rel="stylesheet" href="css/page11.css?v=d2">
   <link rel="stylesheet" href="css/page01.css?v=d1">
-  <link rel="stylesheet" href="css/page12.css?v=4">
-  <link rel="stylesheet" href="css/page13.css?v=2">
+  <link rel="stylesheet" href="css/page12.css?v=5">
+  <link rel="stylesheet" href="css/page13.css?v=5">
 </head>
 <body>
 <div id="progress" aria-hidden="true"></div>
@@ -858,6 +858,7 @@
           <li class="reveal delay-3"><span class="tag t3"><img src="assets/p12-ic-lead.webp" alt="">团队长</span><div><b>带团队更省心</b><p>团队管理、业绩与级别相关资料；组员常问的问题，不用一个个回答。</p></div><i class="chev"></i></li>
           <li class="reveal delay-3"><span class="tag t4"><img src="assets/p12-ic-exec.webp" alt="">负责人</span><div><b>看得到大家卡在哪</b><p>管理后台看使用情况和提问记录，知道哪些资料和培训该补；审批权限申请。</p></div><i class="chev"></i></li>
         </ol>
+        <div class="g12-next reveal delay-3"><i>下一步</i><p>接入销售工作台和公司 CRM：负责人一句话，<b>本周各组组员的新客户、开户、入金和跟进情况</b>直接做成表，统计汇总不再占用行政、人力。</p></div>
       </div>
     </div>
 
@@ -875,18 +876,41 @@
   <section class="section dk-page g13-page" id="s-faq" data-chapter="答疑" data-title="答疑"><div class="wrap dk-wrap">
     <header class="g13-head reveal">
       <div class="dk-head-no"><b>13</b><i></i></div>
-      <div><div class="eyebrow"><b>答疑</b><span>大家最可能关心的几个问题</span></div><h2 class="g13-title">先把顾虑说清楚，<em>再谈怎么用。</em></h2></div>
+      <div><div class="eyebrow"><b>答疑</b><span>销售、团队长、负责人最关心的问题</span></div><h2 class="g13-title">先把顾虑说清楚，<em>再谈怎么用。</em></h2></div>
     </header>
 
-    <div class="g13-grid">
-      <article class="reveal delay-1"><span class="who s">销售</span><h3>日报会不会变得更难写？</h3><p><b>不会，反而更简单。</b>工作台由我独立开发，界面和功能都是按销售的实际工作原生设计的，写日报就像做几道选择题。</p></article>
-      <article class="reveal delay-1"><span class="who t">运维</span><h3>这些功能会不会跟运维冲突？</h3><p><b>不会。</b>运维负责后端的 RockGlobal 券商平台；我做的是服务销售前端的工具，解决的是销售工作中的问题。而且我就在销售公司，和大家沟通很方便。</p></article>
-      <article class="reveal delay-1"><span class="who m">全员</span><h3>RG Ai 万象到底解决了什么问题？</h3><p>代理没入职也能查到活动、政策、账户和文件；员工再多看到规则、话术和操作指引；团队长更容易掌握组员情况；负责人能看到大家最常卡在哪。<em class="dk-ref">见 12</em></p></article>
-      <article class="reveal delay-2"><span class="who s">销售</span><h3>会不会增加大家的工作量？</h3><p>代理后台的客户、入金、佣金数据自动同步进工作台，<b>不用重复录入</b>；名片一次生成长期用；今日待办按客户状态自动生成。</p></article>
-      <article class="reveal delay-2"><span class="who m">管理层</span><h3>公司资料放进 AI，安全吗？</h3><p>只有名单里的人能登录；每份资料按角色设置可见范围，<b>权限在数据库层生效</b>；提问记录留存可审计；原始机密资料不进代码仓库。</p></article>
-      <article class="reveal delay-2"><span class="who m">管理层</span><h3>AI 答错了怎么办？</h3><p>每个回答都标出来源，<b>点开就能核对原文</b>；监管、点差等关键口径以公司最新资料为准，说法有矛盾的先封存、确认后再入库；推荐问题上线前逐条实测。</p></article>
-      <article class="reveal delay-3"><span class="who n">新人</span><h3>新人多久能用起来？</h3><p>不用先啃培训手册：打开工作台跟着今日待办走，不懂的直接问万象；前面讲的渠道、关键词、成交案例和话术，都在工具里随手可查。</p></article>
-      <article class="reveal delay-3"><span class="who m">管理层</span><h3>先从哪一步开始？</h3><p><b>万象已上线</b>，现在就能用；电子名片已有第一版；销售工作台和 RG App 的功能按优先级分阶段推进，每一步都先在团队里试用再推广。</p></article>
+    <div class="g13-cols">
+      <section class="g13-col c-sales reveal delay-1" aria-label="销售关心的问题">
+        <header><span class="role">销售</span><small>每天在一线，最怕麻烦和被封号</small></header>
+        <article><h3>日报会不会变得更难写？</h3><p><b>不会。</b>工作台由我独立开发，界面和功能按销售的实际工作原生设计，写日报就像做几道选择题。</p></article>
+        <article><h3>会不会又多一个要学、要填的东西？</h3><p><b>不会，反而更轻松。</b>过去设置要上网页、看客户情况要开电脑、找材料去 Lark、加代理去后台、找活动去前端，东市买骏马、西市买鞍鞯。现在<b>一个工作台 App 全部搞定</b>。</p></article>
+        <article><h3>客户那么多，今天该先跟谁？</h3><p>今日待办按客户状态自动排好：卡在实名的发实名指引，约了实测的发点差实测，十几天没联系的提醒跟进。</p></article>
+        <article><h3>客户问住了，或者不信我是官方的？</h3><p>规则政策随手问万象，回答附来源；身份让客户扫电子名片、上官网自己核验，监管编号都能查。</p></article>
+      </section>
+
+      <section class="g13-col c-lead reveal delay-2" aria-label="团队长关心的问题">
+        <header><span class="role">团队长</span><small>要带人、要结果，最怕看不清组员</small></header>
+        <article class="big"><h3>组员卡在哪一步，我怎么知道？</h3>
+          <p>打开工作台，每个组员的情况一目了然：</p>
+          <dl class="g13-dl">
+            <dt>客户进度</dt><dd>注册、开户、实名、入金、交易各多少人，卡在哪个阶段；入金出金、本月新客户和手数、活跃客户</dd>
+            <dt>跟进情况</dt><dd>哪些客户多久没联系、跟进记录和客户顾虑、日报交没交、今日待办完成多少</dd>
+            <dt>业绩</dt><dd>佣金、下级代理、组内排名、客户来自哪些渠道</dd>
+          </dl>
+          <p><b>该帮谁、帮哪一步，一眼就知道。</b></p></article>
+        <article><h3>新人带不动，同样的问题要回答几十遍？</h3><p>渠道、关键词、成交案例、顾虑话术都在工作台里，规则政策问万象。团队长只需要处理真正的难点。</p></article>
+        <article><h3>每天收日报、对表格太费时间？</h3><p>日报是选择题，客户数据从代理后台自动同步，团队汇总直接在工作台看，<b>不用再逐个收截图、对 Excel</b>。</p></article>
+      </section>
+
+      <section class="g13-col c-exec reveal delay-3" aria-label="负责人关心的问题">
+        <header><span class="role">负责人</span><small>看全局和风险，最怕协作冲突、人员流失</small></header>
+        <article><h3>这些功能会不会跟运维冲突？</h3><p><b>不会。</b>运维负责后端的 RockGlobal 券商平台，我做的是服务销售前端的工具，解决销售工作中的问题。而且我就在销售公司，沟通方便。</p></article>
+        <article><h3>员工离职会不会把客户带走？</h3><p>客户关系留在平台：名片按编号收回，客户在 App 里看到新对接人，服务记录保留。<em class="dk-ref">见 09</em></p></article>
+        <article class="big"><h3>RG Ai 万象到底解决了什么问题？</h3>
+          <div class="g13-phase"><i>现在</i><p>全公司的随身顾问：代理没入职也能查活动、政策、账户和开户文件；员工再多一层制度、话术和操作指引；团队长不用被同样的问题反复问。每个回答附来源，按角色分级。</p></div>
+          <div class="g13-phase next"><i>下一步</i><p>接入销售工作台和公司 CRM。负责人一句话：<b>“把本周各组组员的新客户、开户、入金和跟进情况做成表”</b>，万象直接调数据出表，行政、人力的统计汇总都省了。</p></div>
+        </article>
+      </section>
     </div>
 
     <footer class="g13-foot reveal delay-3">
