@@ -77,3 +77,31 @@
 .g14-cols{align-items:center}
 .g14-cols .g13-col{justify-content:center;gap:calc(var(--s)*1.1)}
 .g14-cols .g13-col article,.g14-cols .c-ai article{flex:none}
+
+/* 修溢出：卡片按内容分高度（大卡不再被固定比例压扁），多出的空间平均分给各卡 */
+.g13-cols.two article{flex:1 1 auto;min-height:auto}
+.g13-cols.two .c-lead article.big{flex:1 1 auto}
+.g13-cols.two h3{font-size:calc(var(--s)*1.28)}
+.g13-cols.two p{font-size:calc(var(--s)*1)!important;line-height:1.7!important}
+.g13-cols.two .g13-dl dd{font-size:calc(var(--s)*.94)!important;line-height:1.6}
+.g13-cols.two .g13-dl{margin-top:calc(var(--s)*.5);padding:calc(var(--s)*.7) calc(var(--s)*.9);gap:calc(var(--s)*.45) calc(var(--s)*.7)}
+.g13-cols.two article{padding:calc(var(--s)*1) calc(var(--s)*1.4)}
+
+/* ---------- 第 14 页：负责人 8 问，三列 ---------- */
+.g14-cols{grid-template-columns:minmax(0,1.08fr) minmax(0,1fr) minmax(0,1.08fr);gap:calc(var(--s)*1.3);align-items:stretch}
+.g14-cols .g13-col{justify-content:flex-start;gap:calc(var(--s)*.65)}
+.g14-cols .g13-col article,.g14-cols .c-ai article{flex:1 1 auto;min-height:auto;padding:calc(var(--s)*.95) calc(var(--s)*1.2)}
+.g14-cols h3{font-size:calc(var(--s)*1.1)}
+.g14-cols p{font-size:calc(var(--s)*.86)!important;line-height:1.65!important}
+.g14-cols .g13-phase{margin-top:calc(var(--s)*.6);padding:calc(var(--s)*.7) calc(var(--s)*.9)}
+.g14-cols .g13-phase p{font-size:calc(var(--s)*.84)!important}
+.g14-cols .g13-phase i{font-size:calc(var(--s)*.7);padding:calc(var(--s)*.15) calc(var(--s)*.5)}
+.g14-cols .g13-col>header small{font-size:calc(var(--s)*.84);font-weight:700;color:#4d4564}
+.g13-dl.exec{background:#fff4ea}
+.g13-dl.exec dt{background:#ffe0c2;color:#b45c0c}
+.g14-cols .g13-dl dd{font-size:calc(var(--s)*.82)!important}
+@media(min-width:861px) and (max-width:1200px){
+  .g14-cols .g13-col article,.g14-cols .c-ai article{padding:calc(var(--s)*.75) calc(var(--s)*1)}
+  .g14-cols .g13-col{gap:calc(var(--s)*.5)}
+  .g14-cols p{font-size:calc(var(--s)*.82)!important;line-height:1.55!important}
+}
